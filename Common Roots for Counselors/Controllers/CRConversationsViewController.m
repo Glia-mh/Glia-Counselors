@@ -202,9 +202,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         CRConversation *conversationToDelete = [[CRConversationManager sharedInstance].conversations objectAtIndex:indexPath.row];
-        [layerClient deleteConversation:conversationToDelete.layerConversation mode:LYRDeletionModeAllParticipants error:nil];
-        [[CRConversationManager sharedInstance].conversations removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [conversationToDelete.layerConversation delete:LYRDeletionModeAllParticipants error:nil];
     }
 }
 

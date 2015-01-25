@@ -16,7 +16,7 @@
 }
 
 + (UIColor*)commonRootsBlue {
-    UIColor *blue = [UIColor colorWithRed:79.0/255.0 green:156.0/255.0 blue:196.0/255.0 alpha:1]];
+    UIColor *blue = [UIColor colorWithRed:79.0/255.0 green:156.0/255.0 blue:196.0/255.0 alpha:1];
     return blue;
 }
 @end
