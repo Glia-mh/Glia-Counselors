@@ -211,12 +211,15 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        CRConversation *conversationToDelete = [[CRConversationManager sharedInstance].conversations objectAtIndex:indexPath.row];
+        LYRConversation *conversationToDelete = [self.queryController objectAtIndexPath:indexPath];
         NSError *error;
-        [conversationToDelete.layerConversation delete:LYRDeletionModeAllParticipants error:&error];
+        [conversationToDelete delete:LYRDeletionModeAllParticipants error:&error];
         
+        if(error) {
+            NSLog(@"shit");
+        }
+        //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 
