@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16ED0A7DBCE1FFBD93FC8557 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C48BE8392CF32EE204E145AF /* libPods.a */; };
 		6C7340D91A74DF1100C078B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7340D81A74DF1100C078B1 /* main.m */; };
 		6C7340DC1A74DF1100C078B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7340DB1A74DF1100C078B1 /* AppDelegate.m */; };
-		6C7340DF1A74DF1100C078B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7340DE1A74DF1100C078B1 /* ViewController.m */; };
 		6C7340E21A74DF1100C078B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7340E01A74DF1100C078B1 /* Main.storyboard */; };
 		6C7340E41A74DF1100C078B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7340E31A74DF1100C078B1 /* Images.xcassets */; };
-		6C7340E71A74DF1200C078B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C7340E51A74DF1200C078B1 /* LaunchScreen.xib */; };
 		6C7340F31A74DF1200C078B1 /* Common_Roots_for_CounselorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7340F21A74DF1200C078B1 /* Common_Roots_for_CounselorsTests.m */; };
+		6C7341191A74DFA500C078B1 /* UIColor+Common_Roots.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7340FE1A74DFA500C078B1 /* UIColor+Common_Roots.m */; };
+		6C73411A1A74DFA500C078B1 /* CRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341011A74DFA500C078B1 /* CRChatViewController.m */; };
+		6C73411B1A74DFA500C078B1 /* CRConversationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341031A74DFA500C078B1 /* CRConversationsViewController.m */; };
+		6C73411C1A74DFA500C078B1 /* CRCounselorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341051A74DFA500C078B1 /* CRCounselorsViewController.m */; };
+		6C73411D1A74DFA500C078B1 /* CRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341071A74DFA500C078B1 /* CRLoginViewController.m */; };
+		6C73411E1A74DFA500C078B1 /* CRAuthenticationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73410A1A74DFA500C078B1 /* CRAuthenticationManager.m */; };
+		6C73411F1A74DFA500C078B1 /* CRConversationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73410C1A74DFA500C078B1 /* CRConversationManager.m */; };
+		6C7341201A74DFA500C078B1 /* CRNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73410E1A74DFA500C078B1 /* CRNetworkRequest.m */; };
+		6C7341211A74DFA500C078B1 /* CRConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341111A74DFA500C078B1 /* CRConversation.m */; };
+		6C7341221A74DFA500C078B1 /* CRCounselor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341131A74DFA500C078B1 /* CRCounselor.m */; };
+		6C7341231A74DFA500C078B1 /* CRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341151A74DFA500C078B1 /* CRUser.m */; };
+		6C7341241A74DFA500C078B1 /* CRLocalNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341181A74DFA500C078B1 /* CRLocalNotificationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +43,38 @@
 		6C7340D81A74DF1100C078B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C7340DA1A74DF1100C078B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C7340DB1A74DF1100C078B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6C7340DD1A74DF1100C078B1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6C7340DE1A74DF1100C078B1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6C7340E11A74DF1100C078B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C7340E31A74DF1100C078B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6C7340E61A74DF1200C078B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6C7340EC1A74DF1200C078B1 /* Common Roots for CounselorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Common Roots for CounselorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7340F11A74DF1200C078B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C7340F21A74DF1200C078B1 /* Common_Roots_for_CounselorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Common_Roots_for_CounselorsTests.m; sourceTree = "<group>"; };
+		6C7340FD1A74DFA500C078B1 /* UIColor+Common_Roots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Common_Roots.h"; sourceTree = "<group>"; };
+		6C7340FE1A74DFA500C078B1 /* UIColor+Common_Roots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Common_Roots.m"; sourceTree = "<group>"; };
+		6C7341001A74DFA500C078B1 /* CRChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRChatViewController.h; sourceTree = "<group>"; };
+		6C7341011A74DFA500C078B1 /* CRChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRChatViewController.m; sourceTree = "<group>"; };
+		6C7341021A74DFA500C078B1 /* CRConversationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRConversationsViewController.h; sourceTree = "<group>"; };
+		6C7341031A74DFA500C078B1 /* CRConversationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRConversationsViewController.m; sourceTree = "<group>"; };
+		6C7341041A74DFA500C078B1 /* CRCounselorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCounselorsViewController.h; sourceTree = "<group>"; };
+		6C7341051A74DFA500C078B1 /* CRCounselorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCounselorsViewController.m; sourceTree = "<group>"; };
+		6C7341061A74DFA500C078B1 /* CRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLoginViewController.h; sourceTree = "<group>"; };
+		6C7341071A74DFA500C078B1 /* CRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLoginViewController.m; sourceTree = "<group>"; };
+		6C7341091A74DFA500C078B1 /* CRAuthenticationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRAuthenticationManager.h; sourceTree = "<group>"; };
+		6C73410A1A74DFA500C078B1 /* CRAuthenticationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRAuthenticationManager.m; sourceTree = "<group>"; };
+		6C73410B1A74DFA500C078B1 /* CRConversationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRConversationManager.h; sourceTree = "<group>"; };
+		6C73410C1A74DFA500C078B1 /* CRConversationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRConversationManager.m; sourceTree = "<group>"; };
+		6C73410D1A74DFA500C078B1 /* CRNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRNetworkRequest.h; sourceTree = "<group>"; };
+		6C73410E1A74DFA500C078B1 /* CRNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRNetworkRequest.m; sourceTree = "<group>"; };
+		6C7341101A74DFA500C078B1 /* CRConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRConversation.h; sourceTree = "<group>"; };
+		6C7341111A74DFA500C078B1 /* CRConversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRConversation.m; sourceTree = "<group>"; };
+		6C7341121A74DFA500C078B1 /* CRCounselor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCounselor.h; sourceTree = "<group>"; };
+		6C7341131A74DFA500C078B1 /* CRCounselor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCounselor.m; sourceTree = "<group>"; };
+		6C7341141A74DFA500C078B1 /* CRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRUser.h; sourceTree = "<group>"; };
+		6C7341151A74DFA500C078B1 /* CRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRUser.m; sourceTree = "<group>"; };
+		6C7341171A74DFA500C078B1 /* CRLocalNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLocalNotificationView.h; sourceTree = "<group>"; };
+		6C7341181A74DFA500C078B1 /* CRLocalNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLocalNotificationView.m; sourceTree = "<group>"; };
+		750A4D7E8CE085187EFCE1D9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C48BE8392CF32EE204E145AF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD86D68A9113FEA971D0ABE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16ED0A7DBCE1FFBD93FC8557 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3506C93268A9D6D2C7CD8227 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFD86D68A9113FEA971D0ABE /* Pods.debug.xcconfig */,
+				750A4D7E8CE085187EFCE1D9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6C7340CA1A74DF1100C078B1 = {
 			isa = PBXGroup;
 			children = (
 				6C7340D51A74DF1100C078B1 /* Common Roots for Counselors */,
 				6C7340EF1A74DF1200C078B1 /* Common Roots for CounselorsTests */,
 				6C7340D41A74DF1100C078B1 /* Products */,
+				3506C93268A9D6D2C7CD8227 /* Pods */,
+				6F17B95E322F5625C7130BB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,11 +130,13 @@
 			children = (
 				6C7340DA1A74DF1100C078B1 /* AppDelegate.h */,
 				6C7340DB1A74DF1100C078B1 /* AppDelegate.m */,
-				6C7340DD1A74DF1100C078B1 /* ViewController.h */,
-				6C7340DE1A74DF1100C078B1 /* ViewController.m */,
 				6C7340E01A74DF1100C078B1 /* Main.storyboard */,
+				6C7340FC1A74DFA500C078B1 /* Categories */,
+				6C7340FF1A74DFA500C078B1 /* Controllers */,
+				6C7341081A74DFA500C078B1 /* Helpers */,
+				6C73410F1A74DFA500C078B1 /* Models */,
+				6C7341161A74DFA500C078B1 /* Views */,
 				6C7340E31A74DF1100C078B1 /* Images.xcassets */,
-				6C7340E51A74DF1200C078B1 /* LaunchScreen.xib */,
 				6C7340D61A74DF1100C078B1 /* Supporting Files */,
 			);
 			path = "Common Roots for Counselors";
@@ -119,6 +168,73 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6C7340FC1A74DFA500C078B1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6C7340FD1A74DFA500C078B1 /* UIColor+Common_Roots.h */,
+				6C7340FE1A74DFA500C078B1 /* UIColor+Common_Roots.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		6C7340FF1A74DFA500C078B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C7341001A74DFA500C078B1 /* CRChatViewController.h */,
+				6C7341011A74DFA500C078B1 /* CRChatViewController.m */,
+				6C7341021A74DFA500C078B1 /* CRConversationsViewController.h */,
+				6C7341031A74DFA500C078B1 /* CRConversationsViewController.m */,
+				6C7341041A74DFA500C078B1 /* CRCounselorsViewController.h */,
+				6C7341051A74DFA500C078B1 /* CRCounselorsViewController.m */,
+				6C7341061A74DFA500C078B1 /* CRLoginViewController.h */,
+				6C7341071A74DFA500C078B1 /* CRLoginViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6C7341081A74DFA500C078B1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6C7341091A74DFA500C078B1 /* CRAuthenticationManager.h */,
+				6C73410A1A74DFA500C078B1 /* CRAuthenticationManager.m */,
+				6C73410B1A74DFA500C078B1 /* CRConversationManager.h */,
+				6C73410C1A74DFA500C078B1 /* CRConversationManager.m */,
+				6C73410D1A74DFA500C078B1 /* CRNetworkRequest.h */,
+				6C73410E1A74DFA500C078B1 /* CRNetworkRequest.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6C73410F1A74DFA500C078B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C7341101A74DFA500C078B1 /* CRConversation.h */,
+				6C7341111A74DFA500C078B1 /* CRConversation.m */,
+				6C7341121A74DFA500C078B1 /* CRCounselor.h */,
+				6C7341131A74DFA500C078B1 /* CRCounselor.m */,
+				6C7341141A74DFA500C078B1 /* CRUser.h */,
+				6C7341151A74DFA500C078B1 /* CRUser.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6C7341161A74DFA500C078B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C7341171A74DFA500C078B1 /* CRLocalNotificationView.h */,
+				6C7341181A74DFA500C078B1 /* CRLocalNotificationView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F17B95E322F5625C7130BB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C48BE8392CF32EE204E145AF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C7340F61A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Common Roots for Counselors" */;
 			buildPhases = (
+				0EDE4003D1B3EC59F9C8ACD0 /* Check Pods Manifest.lock */,
 				6C7340CF1A74DF1100C078B1 /* Sources */,
 				6C7340D01A74DF1100C078B1 /* Frameworks */,
 				6C7340D11A74DF1100C078B1 /* Resources */,
+				5794556E6CD366BBE7330A37 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,7 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C7340E21A74DF1100C078B1 /* Main.storyboard in Resources */,
-				6C7340E71A74DF1200C078B1 /* LaunchScreen.xib in Resources */,
 				6C7340E41A74DF1100C078B1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,12 +331,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EDE4003D1B3EC59F9C8ACD0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5794556E6CD366BBE7330A37 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6C7340CF1A74DF1100C078B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C7340DF1A74DF1100C078B1 /* ViewController.m in Sources */,
+				6C73411B1A74DFA500C078B1 /* CRConversationsViewController.m in Sources */,
+				6C7341201A74DFA500C078B1 /* CRNetworkRequest.m in Sources */,
+				6C7341241A74DFA500C078B1 /* CRLocalNotificationView.m in Sources */,
+				6C7341191A74DFA500C078B1 /* UIColor+Common_Roots.m in Sources */,
+				6C73411C1A74DFA500C078B1 /* CRCounselorsViewController.m in Sources */,
+				6C73411D1A74DFA500C078B1 /* CRLoginViewController.m in Sources */,
+				6C73411E1A74DFA500C078B1 /* CRAuthenticationManager.m in Sources */,
+				6C7341211A74DFA500C078B1 /* CRConversation.m in Sources */,
+				6C7341221A74DFA500C078B1 /* CRCounselor.m in Sources */,
+				6C73411F1A74DFA500C078B1 /* CRConversationManager.m in Sources */,
+				6C73411A1A74DFA500C078B1 /* CRChatViewController.m in Sources */,
+				6C7341231A74DFA500C078B1 /* CRUser.m in Sources */,
 				6C7340DC1A74DF1100C078B1 /* AppDelegate.m in Sources */,
 				6C7340D91A74DF1100C078B1 /* main.m in Sources */,
 			);
@@ -250,14 +411,6 @@
 				6C7340E11A74DF1100C078B1 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6C7340E51A74DF1200C078B1 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C7340E61A74DF1200C078B1 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -341,9 +494,11 @@
 		};
 		6C7340F71A74DF1200C078B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFD86D68A9113FEA971D0ABE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Common Roots for Counselors/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,9 +506,11 @@
 		};
 		6C7340F81A74DF1200C078B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 750A4D7E8CE085187EFCE1D9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Common Roots for Counselors/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +569,7 @@
 				6C7340F81A74DF1200C078B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C7340F91A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Common Roots for CounselorsTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +578,7 @@
 				6C7340FB1A74DF1200C078B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

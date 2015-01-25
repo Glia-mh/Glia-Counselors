@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CRAuthenticationManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, retain) CRAuthenticationManager *authenticationManager;
 
 
 @end
