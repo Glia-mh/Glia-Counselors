@@ -113,24 +113,24 @@ static NSString *const MIMETypeTextPlain = @"text/plain";
 }
 
 - (void)messageChange:(NSNotification *)notification {
-    NSDictionary *changeObject = (NSDictionary *)notification.object;
-    NSLog(@"received message in chat : %@", changeObject);
-    
-    LYRMessage *message = changeObject[@"object"];
-    if(![message.sentByUserID isEqualToString:self.conversation.participant.userID] && ![message.sentByUserID isEqualToString:[CRAuthenticationManager sharedInstance].currentUser.userID]) {
-        LYRMessagePart *msgPart = [message.parts firstObject];
-        NSString *messageText = [[NSString alloc] initWithData:msgPart.data encoding:NSUTF8StringEncoding];
-        
-        CRLocalNotificationView *notificationView = [[CRLocalNotificationView alloc] initWithConversation:self.conversation text:messageText width: self.view.frame.size.width];
-        notificationView.delegate = self;
-        [self.view addSubview:notificationView];
-        showingNotification = YES;
-        [self setNeedsStatusBarAppearanceUpdate];
-        [notificationView showWithDuration:5.0 withCompletion:^(BOOL done) {
-            showingNotification = NO;
-            [self setNeedsStatusBarAppearanceUpdate];
-        }];
-    }
+//    NSDictionary *changeObject = (NSDictionary *)notification.object;
+//    NSLog(@"received message in chat : %@", changeObject);
+//    
+//    LYRMessage *message = changeObject[@"object"];
+//    if(![message.sentByUserID isEqualToString:self.conversation.participant.userID] && ![message.sentByUserID isEqualToString:[CRAuthenticationManager sharedInstance].currentUser.userID]) {
+//        LYRMessagePart *msgPart = [message.parts firstObject];
+//        NSString *messageText = [[NSString alloc] initWithData:msgPart.data encoding:NSUTF8StringEncoding];
+//        
+//        CRLocalNotificationView *notificationView = [[CRLocalNotificationView alloc] initWithConversation:self.conversation text:messageText width: self.view.frame.size.width];
+//        notificationView.delegate = self;
+//        [self.view addSubview:notificationView];
+//        showingNotification = YES;
+//        [self setNeedsStatusBarAppearanceUpdate];
+//        [notificationView showWithDuration:5.0 withCompletion:^(BOOL done) {
+//            showingNotification = NO;
+//            [self setNeedsStatusBarAppearanceUpdate];
+//        }];
+//    }
 }
 
 #pragma mark - JSQMessagesViewController method overrides
