@@ -25,6 +25,12 @@
 		6C7341221A74DFA500C078B1 /* CRCounselor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341131A74DFA500C078B1 /* CRCounselor.m */; };
 		6C7341231A74DFA500C078B1 /* CRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341151A74DFA500C078B1 /* CRUser.m */; };
 		6C7341241A74DFA500C078B1 /* CRLocalNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341181A74DFA500C078B1 /* CRLocalNotificationView.m */; };
+		B258B4371A758A0000B087BB /* RTSpinKitArcAltAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B258B42B1A758A0000B087BB /* RTSpinKitArcAltAnimation.m */; };
+		B258B4381A758A0000B087BB /* RTSpinKitBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B258B42D1A758A0000B087BB /* RTSpinKitBounceAnimation.m */; };
+		B258B4391A758A0000B087BB /* RTSpinKitPulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B258B42F1A758A0000B087BB /* RTSpinKitPulseAnimation.m */; };
+		B258B43A1A758A0000B087BB /* RTSpinKitCircleFlipAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B258B4311A758A0000B087BB /* RTSpinKitCircleFlipAnimation.m */; };
+		B258B43B1A758A0000B087BB /* RTSpinKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = B258B4331A758A0000B087BB /* RTSpinKitView.m */; };
+		B258B43C1A758A0000B087BB /* RTSpinKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B258B4351A758A0000B087BB /* RTSpinKitUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,19 @@
 		6C7341171A74DFA500C078B1 /* CRLocalNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLocalNotificationView.h; sourceTree = "<group>"; };
 		6C7341181A74DFA500C078B1 /* CRLocalNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLocalNotificationView.m; sourceTree = "<group>"; };
 		750A4D7E8CE085187EFCE1D9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B258B42A1A758A0000B087BB /* RTSpinKitArcAltAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitArcAltAnimation.h; sourceTree = "<group>"; };
+		B258B42B1A758A0000B087BB /* RTSpinKitArcAltAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitArcAltAnimation.m; sourceTree = "<group>"; };
+		B258B42C1A758A0000B087BB /* RTSpinKitBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitBounceAnimation.h; sourceTree = "<group>"; };
+		B258B42D1A758A0000B087BB /* RTSpinKitBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitBounceAnimation.m; sourceTree = "<group>"; };
+		B258B42E1A758A0000B087BB /* RTSpinKitPulseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitPulseAnimation.h; sourceTree = "<group>"; };
+		B258B42F1A758A0000B087BB /* RTSpinKitPulseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitPulseAnimation.m; sourceTree = "<group>"; };
+		B258B4301A758A0000B087BB /* RTSpinKitCircleFlipAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitCircleFlipAnimation.h; sourceTree = "<group>"; };
+		B258B4311A758A0000B087BB /* RTSpinKitCircleFlipAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitCircleFlipAnimation.m; sourceTree = "<group>"; };
+		B258B4321A758A0000B087BB /* RTSpinKitAnimating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitAnimating.h; sourceTree = "<group>"; };
+		B258B4331A758A0000B087BB /* RTSpinKitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitView.m; sourceTree = "<group>"; };
+		B258B4341A758A0000B087BB /* RTSpinKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitView.h; sourceTree = "<group>"; };
+		B258B4351A758A0000B087BB /* RTSpinKitUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitUtils.m; sourceTree = "<group>"; };
+		B258B4361A758A0000B087BB /* RTSpinKitUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitUtils.h; sourceTree = "<group>"; };
 		C48BE8392CF32EE204E145AF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD86D68A9113FEA971D0ABE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +150,7 @@
 				6C7340DA1A74DF1100C078B1 /* AppDelegate.h */,
 				6C7340DB1A74DF1100C078B1 /* AppDelegate.m */,
 				6C7340E01A74DF1100C078B1 /* Main.storyboard */,
+				B258B43E1A758A2E00B087BB /* SpinKit */,
 				6C7340FC1A74DFA500C078B1 /* Categories */,
 				6C7340FF1A74DFA500C078B1 /* Controllers */,
 				6C7341081A74DFA500C078B1 /* Helpers */,
@@ -233,6 +253,34 @@
 				C48BE8392CF32EE204E145AF /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B258B43D1A758A2400B087BB /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B258B42A1A758A0000B087BB /* RTSpinKitArcAltAnimation.h */,
+				B258B42B1A758A0000B087BB /* RTSpinKitArcAltAnimation.m */,
+				B258B42C1A758A0000B087BB /* RTSpinKitBounceAnimation.h */,
+				B258B42D1A758A0000B087BB /* RTSpinKitBounceAnimation.m */,
+				B258B42E1A758A0000B087BB /* RTSpinKitPulseAnimation.h */,
+				B258B42F1A758A0000B087BB /* RTSpinKitPulseAnimation.m */,
+				B258B4301A758A0000B087BB /* RTSpinKitCircleFlipAnimation.h */,
+				B258B4311A758A0000B087BB /* RTSpinKitCircleFlipAnimation.m */,
+				B258B4321A758A0000B087BB /* RTSpinKitAnimating.h */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
+		B258B43E1A758A2E00B087BB /* SpinKit */ = {
+			isa = PBXGroup;
+			children = (
+				B258B43D1A758A2400B087BB /* Animations */,
+				B258B4331A758A0000B087BB /* RTSpinKitView.m */,
+				B258B4341A758A0000B087BB /* RTSpinKitView.h */,
+				B258B4351A758A0000B087BB /* RTSpinKitUtils.m */,
+				B258B4361A758A0000B087BB /* RTSpinKitUtils.h */,
+			);
+			name = SpinKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,16 +417,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B258B4371A758A0000B087BB /* RTSpinKitArcAltAnimation.m in Sources */,
 				6C73411B1A74DFA500C078B1 /* CRConversationsViewController.m in Sources */,
+				B258B43A1A758A0000B087BB /* RTSpinKitCircleFlipAnimation.m in Sources */,
 				6C7341201A74DFA500C078B1 /* CRNetworkRequest.m in Sources */,
+				B258B43C1A758A0000B087BB /* RTSpinKitUtils.m in Sources */,
+				B258B4391A758A0000B087BB /* RTSpinKitPulseAnimation.m in Sources */,
 				6C7341241A74DFA500C078B1 /* CRLocalNotificationView.m in Sources */,
 				6C7341191A74DFA500C078B1 /* UIColor+Common_Roots.m in Sources */,
 				6C73411C1A74DFA500C078B1 /* CRCounselorsViewController.m in Sources */,
 				6C73411D1A74DFA500C078B1 /* CRLoginViewController.m in Sources */,
 				6C73411E1A74DFA500C078B1 /* CRAuthenticationManager.m in Sources */,
 				6C7341211A74DFA500C078B1 /* CRConversation.m in Sources */,
+				B258B4381A758A0000B087BB /* RTSpinKitBounceAnimation.m in Sources */,
 				6C7341221A74DFA500C078B1 /* CRCounselor.m in Sources */,
 				6C73411F1A74DFA500C078B1 /* CRConversationManager.m in Sources */,
+				B258B43B1A758A0000B087BB /* RTSpinKitView.m in Sources */,
 				6C73411A1A74DFA500C078B1 /* CRChatViewController.m in Sources */,
 				6C7341231A74DFA500C078B1 /* CRUser.m in Sources */,
 				6C7340DC1A74DF1100C078B1 /* AppDelegate.m in Sources */,
