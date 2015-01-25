@@ -9,6 +9,7 @@
 #define PADDING 15
 
 #import "CRLoginViewController.h"
+#import "RTSpinKitView.h"
 
 @interface CRLoginViewController ()
 
@@ -95,6 +96,10 @@
     userID = self.studentIDTextField.text;
     
     if (userID.length != 0) {
+        RTSpinKitView *spinner = [[RTSpinKitView alloc] initWithStyle: RTSpinKitViewStyleCircleFlip color:[UIColor whiteColor] spinnerSize: 80.0f];
+        spinner.center = self.view.center;
+        [self.view addSubview: spinner];
+        
         [[CRAuthenticationManager sharedInstance] authenticateUserID:userID completionBlock:^(BOOL authenticated) {
             if(authenticated){
                 [[CRAuthenticationManager sharedInstance] authenticateLayerWithID:userID client:client completionBlock:^(NSString *authenticatedUserID, NSError *error) {
@@ -138,6 +143,7 @@
             [UIView animateWithDuration: 0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations: ^{
                 self.studentIDTextField.frame = CGRectMake(self.studentIDTextField.frame.origin.x, self.sloganLabel.frame.origin.y + self.studentIDTextField.frame.size.height + PADDING, self.loginButton.frame.size.width, self.studentIDTextField.frame.size.height);
             } completion:nil];
+            [self.studentIDTextField becomeFirstResponder];
         }];
     }
 }
