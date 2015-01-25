@@ -48,7 +48,7 @@
     self = [super initWithCoder:aCoder];
     if (self) {
         self.parseClassName = PARSE_COUNSELORS_CLASS_NAME;
-        self.pullToRefreshEnabled = NO;
+        self.pullToRefreshEnabled = YES;
         self.paginationEnabled = NO;
         self.objectsPerPage = 150;
         self.sections = [NSMutableDictionary dictionary];

@@ -98,16 +98,17 @@
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="jMG-RJ-UDw">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.33725490200000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="switchTapped:" destination="HNX-CP-iUp" eventType="valueChanged" id="W5m-QY-XSw"/>
+                                </connections>
                             </switch>
                             <color key="tintColor" red="0.33725490200000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="availibleSwitch:" destination="HNX-CP-iUp" id="igs-Ve-61j"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="availibleSwitch" destination="1Bo-JX-bgC" id="VBU-BA-Guu"/>
+                        <outlet property="availibleSwitch" destination="jMG-RJ-UDw" id="9bd-FH-5mV"/>
                         <outlet property="conversationsTableView" destination="i5j-q0-AKS" id="Wcr-hn-oko"/>
                         <segue destination="AOx-ez-wSV" kind="push" identifier="PushChatVC" id="QpN-AN-yUW"/>
                         <segue destination="mfT-zG-aMC" kind="modal" identifier="ModalCounselorsVC" modalTransitionStyle="coverVertical" id="yjf-AE-gjn"/>

@@ -29,7 +29,8 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *counselorsCollectionView;
 
-- (IBAction)availibleSwitch:(id)sender;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *availibleSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *availibleSwitch;
+
+- (IBAction)switchTapped:(id)sender;
 
 @end

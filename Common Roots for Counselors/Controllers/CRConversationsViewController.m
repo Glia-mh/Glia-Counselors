@@ -304,9 +304,11 @@
     
     return cell;
 }
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
+
 //- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
 //    return UIEdgeInsetsMake(10, 10, 10, 10);
 //}
@@ -316,6 +318,37 @@
     
 }
 
-- (IBAction)availibleSwitch:(id)sender {
+- (IBAction)switchTapped:(id)sender {
+    if ([self.availibleSwitch isOn]) {
+        [self.availibleSwitch setOn:YES animated:YES];
+
+        PFQuery *query = [PFQuery queryWithClassName:@"Counselors"];
+        [query whereKey:@"userID" equalTo:[CRAuthenticationManager sharedInstance].currentUser.userID];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                PFObject *counselor = [objects firstObject];
+                [counselor setValue:@"YES" forKey:@"isAvailible"];
+                [counselor save];
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+    } else {
+        [self.availibleSwitch setOn:NO animated:YES];
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"Counselors"];
+        [query whereKey:@"userID" equalTo:[CRAuthenticationManager sharedInstance].currentUser.userID];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                PFObject *counselor = [objects firstObject];
+                [counselor setValue:@"NO" forKey:@"isAvailible"];
+                [counselor save];
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+    }
 }
 @end
