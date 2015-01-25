@@ -15,7 +15,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="OMT-Dc-2UX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.30926450010000001" green="0.61273272280000002" blue="0.76944633149999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.30980392156862746" green="0.61176470588235299" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,7 +34,7 @@
             </objects>
             <point key="canvasLocation" x="-119.5" y="529.5"/>
         </scene>
-        <!--Common Roots Counselor-->
+        <!--Conversations-->
         <scene sceneID="SRZ-9c-Yyi">
             <objects>
                 <viewController storyboardIdentifier="ConversationsViewController" id="HNX-CP-iUp" customClass="CRConversationsViewController" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Common Roots Counselor" id="jMX-Mh-7nQ">
+                    <navigationItem key="navigationItem" title="Conversations" id="jMX-Mh-7nQ">
                         <barButtonItem key="backBarButtonItem" title=" " id="Kbh-Wb-IfW"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="1Bo-JX-bgC">
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="jMG-RJ-UDw">
@@ -105,11 +105,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <color key="tintColor" red="0.33725490200000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="availibleSwitch:" destination="HNX-CP-iUp" id="igs-Ve-61j"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="y6c-eZ-Tve"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="availibleSwitch" destination="1Bo-JX-bgC" id="VBU-BA-Guu"/>
                         <outlet property="conversationsTableView" destination="i5j-q0-AKS" id="Wcr-hn-oko"/>
                         <segue destination="AOx-ez-wSV" kind="push" identifier="PushChatVC" id="QpN-AN-yUW"/>
                         <segue destination="mfT-zG-aMC" kind="modal" identifier="ModalCounselorsVC" modalTransitionStyle="coverVertical" id="yjf-AE-gjn"/>

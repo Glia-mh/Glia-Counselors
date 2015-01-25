@@ -304,4 +304,6 @@
     
 }
 
+- (IBAction)availibleSwitch:(id)sender {
+}
 @end
