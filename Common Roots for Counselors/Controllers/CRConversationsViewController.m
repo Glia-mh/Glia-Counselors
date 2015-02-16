@@ -57,16 +57,19 @@
     }
     
     LYRQuery *lyrQuery = [LYRQuery queryWithClass:[LYRConversation class]];
-    lyrQuery.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO]];
+    lyrQuery.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"lastMessage.receivedAt" ascending:NO]];
     self.queryController = [layerClient queryControllerWithQuery:lyrQuery];
     self.queryController.delegate = self;
     
     NSError *error;
     BOOL success = [self.queryController execute:&error];
     if (success) {
+        if(self.queryController.count != 0){
+        messageLabel.alpha = 0;
         NSLog(@"Query fetched %tu conversation objects", [self.queryController numberOfObjectsInSection:0]);
         self.conversationsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.conversationsTableView reloadData];
+        }
     } else {
         NSLog(@"Query failed with error %@", error);
     }
@@ -98,6 +101,8 @@
             
             self.conversationsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
             [self.conversationsTableView reloadData];
+        } else {
+            messageLabel.alpha = 0;
         }
     } else {
         NSLog(@"Query failed with error %@", error);
@@ -154,6 +159,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    messageLabel.alpha = 0;
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Conversation" forIndexPath:indexPath];
     
     LYRConversation *lyrConversation = [self.queryController objectAtIndexPath:indexPath];

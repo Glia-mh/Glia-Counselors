@@ -64,6 +64,7 @@ static NSString *const MIMETypeTextPlain = @"text/plain";
     self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero;
     
     self.inputToolbar.contentView.leftBarButtonItem = nil;
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -84,12 +85,29 @@ static NSString *const MIMETypeTextPlain = @"text/plain";
                                                  selector:@selector(messageChange:)
                                                      name:kMessageChangeNotification
                                                    object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(didReceiveTypingIndicator:)
+                                                     name:LYRConversationDidReceiveTypingIndicatorNotification
+                                                   object:nil];
     }
     return self;
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)didReceiveTypingIndicator:(NSNotification *)notification
+{
+    NSString *participantID = notification.userInfo[LYRTypingIndicatorParticipantUserInfoKey];
+    LYRTypingIndicator typingIndicator = [notification.userInfo[LYRTypingIndicatorValueUserInfoKey] unsignedIntegerValue];
+    
+    if (typingIndicator == LYRTypingDidBegin) {
+        self.showTypingIndicator = YES;
+    }
+    else {
+        self.showTypingIndicator = NO;
+    }
 }
 
 - (void)conversationChange:(NSNotification *)notification {
@@ -388,6 +406,15 @@ static NSString *const MIMETypeTextPlain = @"text/plain";
     return 0.0f;
 }
 
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    [self.conversation.layerConversation sendTypingIndicator:LYRTypingDidBegin];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    [self.conversation.layerConversation sendTypingIndicator:LYRTypingDidFinish];
+}
+
 - (void)notificationTappedWithConversation:(CRConversation *)conversation {
 #warning need to load new conversation
 }
@@ -448,8 +475,9 @@ static NSString *const MIMETypeTextPlain = @"text/plain";
     }];
 }
 
-- (void)queryControllerDidChangeContent:(LYRQueryController *)queryController
-{
+- (void)queryControllerDidChangeContent:(LYRQueryController *)queryController{
+
+    
 }
 
 @end
