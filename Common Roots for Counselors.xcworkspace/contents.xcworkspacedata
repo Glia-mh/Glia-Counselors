@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Common Roots for Counselors.xcodeproj">
+      location = "group:/Users/spenceryen/Common Roots for Counselors/Team Roots for Counselors.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

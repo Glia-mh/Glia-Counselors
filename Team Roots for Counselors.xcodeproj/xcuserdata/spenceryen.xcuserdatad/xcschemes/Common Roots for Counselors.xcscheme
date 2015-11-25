@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C7340D21A74DF1100C078B1"
-               BuildableName = "Common Roots for Counselors.app"
-               BlueprintName = "Common Roots for Counselors"
-               ReferencedContainer = "container:Common Roots for Counselors.xcodeproj">
+               BuildableName = "Team Roots for Counselors.app"
+               BlueprintName = "Team Roots for Counselors"
+               ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,27 +29,27 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C7340EB1A74DF1200C078B1"
-               BuildableName = "Common Roots for CounselorsTests.xctest"
-               BlueprintName = "Common Roots for CounselorsTests"
-               ReferencedContainer = "container:Common Roots for Counselors.xcodeproj">
+               BuildableName = "Team Roots for Counselors.xctest"
+               BlueprintName = "Team Roots for CounselorsTests"
+               ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C7340EB1A74DF1200C078B1"
-               BuildableName = "Common Roots for CounselorsTests.xctest"
-               BlueprintName = "Common Roots for CounselorsTests"
-               ReferencedContainer = "container:Common Roots for Counselors.xcodeproj">
+               BuildableName = "Team Roots for Counselors.xctest"
+               BlueprintName = "Team Roots for CounselorsTests"
+               ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,46 +57,51 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C7340D21A74DF1100C078B1"
-            BuildableName = "Common Roots for Counselors.app"
-            BlueprintName = "Common Roots for Counselors"
-            ReferencedContainer = "container:Common Roots for Counselors.xcodeproj">
+            BuildableName = "Team Roots for Counselors.app"
+            BlueprintName = "Team Roots for Counselors"
+            ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C7340D21A74DF1100C078B1"
-            BuildableName = "Common Roots for Counselors.app"
-            BlueprintName = "Common Roots for Counselors"
-            ReferencedContainer = "container:Common Roots for Counselors.xcodeproj">
+            BuildableName = "Team Roots for Counselors.app"
+            BlueprintName = "Team Roots for Counselors"
+            ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C7340D21A74DF1100C078B1"
-            BuildableName = "Common Roots for Counselors.app"
-            BlueprintName = "Common Roots for Counselors"
-            ReferencedContainer = "container:Common Roots for Counselors.xcodeproj">
+            BuildableName = "Team Roots for Counselors.app"
+            BlueprintName = "Team Roots for Counselors"
+            ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

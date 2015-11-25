@@ -15,8 +15,9 @@
     return blue;
 }
 
-+ (UIColor*)commonRootsBlue {
-    UIColor *blue = [UIColor colorWithRed:79.0/255.0 green:156.0/255.0 blue:196.0/255.0 alpha:1];
-    return blue;
++ (UIColor*)teamRootsGreen {
+    return [UIColor colorWithRed:135.0/255.0f green:211.0/255.0f blue:103.0/255.0f alpha:1.0f];
 }
+
+
 @end

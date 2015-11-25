@@ -13,6 +13,6 @@
 
 + (UIColor*)unreadBlue;
 
-+ (UIColor*)commonRootsBlue;
++ (UIColor*)teamRootsGreen;
 
 @end

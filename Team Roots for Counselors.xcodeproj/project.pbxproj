@@ -44,14 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C7340D31A74DF1100C078B1 /* Common Roots for Counselors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Common Roots for Counselors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C7340D31A74DF1100C078B1 /* Team Roots for Counselors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Team Roots for Counselors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7340D71A74DF1100C078B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C7340D81A74DF1100C078B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C7340DA1A74DF1100C078B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C7340DB1A74DF1100C078B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6C7340E11A74DF1100C078B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C7340E31A74DF1100C078B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6C7340EC1A74DF1200C078B1 /* Common Roots for CounselorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Common Roots for CounselorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C7340EC1A74DF1200C078B1 /* Team Roots for Counselors.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Team Roots for Counselors.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7340F11A74DF1200C078B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C7340F21A74DF1200C078B1 /* Common_Roots_for_CounselorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Common_Roots_for_CounselorsTests.m; sourceTree = "<group>"; };
 		6C7340FD1A74DFA500C078B1 /* UIColor+Common_Roots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Common_Roots.h"; sourceTree = "<group>"; };
@@ -138,8 +138,8 @@
 		6C7340D41A74DF1100C078B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C7340D31A74DF1100C078B1 /* Common Roots for Counselors.app */,
-				6C7340EC1A74DF1200C078B1 /* Common Roots for CounselorsTests.xctest */,
+				6C7340D31A74DF1100C078B1 /* Team Roots for Counselors.app */,
+				6C7340EC1A74DF1200C078B1 /* Team Roots for Counselors.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,9 +286,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6C7340D21A74DF1100C078B1 /* Common Roots for Counselors */ = {
+		6C7340D21A74DF1100C078B1 /* Team Roots for Counselors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C7340F61A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Common Roots for Counselors" */;
+			buildConfigurationList = 6C7340F61A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots for Counselors" */;
 			buildPhases = (
 				0EDE4003D1B3EC59F9C8ACD0 /* Check Pods Manifest.lock */,
 				6C7340CF1A74DF1100C078B1 /* Sources */,
@@ -300,14 +300,14 @@
 			);
 			dependencies = (
 			);
-			name = "Common Roots for Counselors";
+			name = "Team Roots for Counselors";
 			productName = "Common Roots for Counselors";
-			productReference = 6C7340D31A74DF1100C078B1 /* Common Roots for Counselors.app */;
+			productReference = 6C7340D31A74DF1100C078B1 /* Team Roots for Counselors.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6C7340EB1A74DF1200C078B1 /* Common Roots for CounselorsTests */ = {
+		6C7340EB1A74DF1200C078B1 /* Team Roots for CounselorsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C7340F91A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Common Roots for CounselorsTests" */;
+			buildConfigurationList = 6C7340F91A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots for CounselorsTests" */;
 			buildPhases = (
 				6C7340E81A74DF1200C078B1 /* Sources */,
 				6C7340E91A74DF1200C078B1 /* Frameworks */,
@@ -318,9 +318,9 @@
 			dependencies = (
 				6C7340EE1A74DF1200C078B1 /* PBXTargetDependency */,
 			);
-			name = "Common Roots for CounselorsTests";
+			name = "Team Roots for CounselorsTests";
 			productName = "Common Roots for CounselorsTests";
-			productReference = 6C7340EC1A74DF1200C078B1 /* Common Roots for CounselorsTests.xctest */;
+			productReference = 6C7340EC1A74DF1200C078B1 /* Team Roots for Counselors.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -341,7 +341,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6C7340CE1A74DF1100C078B1 /* Build configuration list for PBXProject "Common Roots for Counselors" */;
+			buildConfigurationList = 6C7340CE1A74DF1100C078B1 /* Build configuration list for PBXProject "Team Roots for Counselors" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -354,8 +354,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6C7340D21A74DF1100C078B1 /* Common Roots for Counselors */,
-				6C7340EB1A74DF1200C078B1 /* Common Roots for CounselorsTests */,
+				6C7340D21A74DF1100C078B1 /* Team Roots for Counselors */,
+				6C7340EB1A74DF1200C078B1 /* Team Roots for CounselorsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -453,7 +453,7 @@
 /* Begin PBXTargetDependency section */
 		6C7340EE1A74DF1200C078B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6C7340D21A74DF1100C078B1 /* Common Roots for Counselors */;
+			target = 6C7340D21A74DF1100C078B1 /* Team Roots for Counselors */;
 			targetProxy = 6C7340ED1A74DF1200C078B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -489,6 +489,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -530,6 +531,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -554,7 +556,7 @@
 				INFOPLIST_FILE = "Common Roots for Counselors/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Team Roots for Counselors";
 			};
 			name = Debug;
 		};
@@ -566,7 +568,7 @@
 				INFOPLIST_FILE = "Common Roots for Counselors/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Team Roots for Counselors";
 			};
 			name = Release;
 		};
@@ -584,8 +586,8 @@
 				);
 				INFOPLIST_FILE = "Common Roots for CounselorsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Common Roots for Counselors.app/Common Roots for Counselors";
+				PRODUCT_NAME = "Team Roots for Counselors";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Team Roots for Counselors.app/Team Roots for Counselors";
 			};
 			name = Debug;
 		};
@@ -599,15 +601,15 @@
 				);
 				INFOPLIST_FILE = "Common Roots for CounselorsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Common Roots for Counselors.app/Common Roots for Counselors";
+				PRODUCT_NAME = "Team Roots for Counselors";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Team Roots for Counselors.app/Team Roots for Counselors";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6C7340CE1A74DF1100C078B1 /* Build configuration list for PBXProject "Common Roots for Counselors" */ = {
+		6C7340CE1A74DF1100C078B1 /* Build configuration list for PBXProject "Team Roots for Counselors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C7340F41A74DF1200C078B1 /* Debug */,
@@ -616,7 +618,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C7340F61A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Common Roots for Counselors" */ = {
+		6C7340F61A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots for Counselors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C7340F71A74DF1200C078B1 /* Debug */,
@@ -625,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C7340F91A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Common Roots for CounselorsTests" */ = {
+		6C7340F91A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots for CounselorsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C7340FA1A74DF1200C078B1 /* Debug */,
