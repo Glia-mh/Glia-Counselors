@@ -7,6 +7,8 @@
 //
 
 #import "CRConversationManager.h"
+#import "CRAuthenticationManager.h"
+#import "CRCounselor.h"
 
 NSString * const kConversationChangeNotification = @"ConversationChange";
 NSString * const kMessageChangeNotification = @"MessageChange";
@@ -34,6 +36,7 @@ NSString * const kMessageChangeNotification = @"MessageChange";
     return _layerClient;
 }
 
+//out of use
 - (void)conversationsForLayerClient:(LYRClient *)client completionBlock:(void (^)(NSArray *conversations, NSError *error))completionBlock {
     LYRQuery *query = [LYRQuery queryWithClass:[LYRConversation class]];
     
@@ -69,9 +72,23 @@ NSString * const kMessageChangeNotification = @"MessageChange";
         } else {
             unread = YES;
         }
+        
+        NSString *studentName = [lyrConversation.metadata valueForKey:@"student.name"];
+        
+        if(studentName.length == 0){
+            studentName = [self randomTreeNameCombination];
+            NSDictionary *metadata = @{  @"student" : @{
+                                               @"name" : studentName,
+                                               @"ID" : [lyrConversation.metadata valueForKey:@"student.ID"],
+                                               @"avatarString" : [lyrConversation.metadata valueForKey:@"student.avatarString"]}
+                                       };
+            
+            [lyrConversation setValuesForMetadataKeyPathsWithDictionary:metadata merge:YES];
+        }
 
-        CRUser *participant = [[CRUser alloc] initWithID:[lyrConversation.metadata valueForKey:@"student.ID"] avatarString:[lyrConversation.metadata valueForKey:@"student.avatarString"] name:[lyrConversation.metadata valueForKey:@"student.name"]];
-
+        CRUser *participant = [[CRUser alloc] initWithID:[lyrConversation.metadata valueForKey:@"student.ID"] avatarString:[lyrConversation.metadata valueForKey:@"student.avatarString"] name:[lyrConversation.metadata valueForKey:@"student.name"] schoolID:[CRAuthenticationManager schoolID]];
+        NSLog(@"participaant name: %@", participant.name);
+        
         CRConversation *crConversation = [[CRConversation alloc] initWithParticipant:participant conversation:lyrConversation messages:messages latestMessage:latestMessage unread:unread];
         
         [conversationsArray addObject:crConversation];
@@ -100,38 +117,22 @@ NSString * const kMessageChangeNotification = @"MessageChange";
         unread = YES;
     }
    
-    NSDictionary *participantDictionary = [lyrConversation.metadata valueForKey:@"student"];
-//    NSData *participantMetadata = [participantJSONString dataUsingEncoding:NSUTF8StringEncoding];
+    //    NSData *participantMetadata = [participantJSONString dataUsingEncoding:NSUTF8StringEncoding];
 //    NSDictionary *participantDictionary = [NSJSONSerialization JSONObjectWithData:participantMetadata options:0 error:nil];
     
-    CRUser *participant = [[CRUser alloc] initWithID:[participantDictionary valueForKey:@"ID"] avatarString:[participantDictionary valueForKey:@"avatarString"] name:[participantDictionary valueForKey:@"name"]];
+    NSString *studentName = [[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"name"];
+    
+    if(studentName.length == 0){
+        studentName = [self randomTreeNameCombination];
+        [lyrConversation setValue:studentName forMetadataAtKeyPath:@"student.name"];
+    }
+    
+    CRUser *participant = [[CRUser alloc] initWithID:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"ID"] avatarString:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"avatarString"] name:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"name"] schoolID:[CRAuthenticationManager schoolID]];
+    NSLog(@"participaant name: %@", participant.name);
     
     CRConversation *crConversation = [[CRConversation alloc] initWithParticipant:participant conversation:lyrConversation messages:messages latestMessage:latestMessage unread:unread];
     
     return crConversation;
-}
-
-- (void)newConversationWithCounselor:(CRUser *)counselor client:(LYRClient *)layerClient completionBlock:(void (^)(CRConversation *conversation, NSError *error))completionBlock {
-    NSError *error;
-    LYRConversation *lyrConversation = [layerClient newConversationWithParticipants:[NSSet setWithObject:counselor.userID] options:nil error:&error];
-    
-    NSDictionary *metadata = @{@"counselor" :
-                                    @{
-                                       @"name" : counselor.name,
-                                       @"ID" : counselor.userID,
-                                       @"avatarString" : counselor.avatarString},
-                               @"student" : @{
-                                       @"name" : [[CRAuthenticationManager sharedInstance] currentUser].name,
-                                       @"ID" : [[CRAuthenticationManager sharedInstance] currentUser].userID,
-                                       @"avatarString" : [[CRAuthenticationManager sharedInstance] currentUser].avatarString}
-                               };
-    
-    [lyrConversation setValuesForMetadataKeyPathsWithDictionary:metadata merge:YES];
-    
-    CRUser *participant = [[CRUser alloc] initWithID:counselor.userID avatarString:counselor.avatarString name:counselor.name];
-    CRConversation *crConversation = [[CRConversation alloc] initWithParticipant:participant conversation:lyrConversation messages:nil latestMessage:nil unread:NO];
-    
-    completionBlock(crConversation, nil);
 }
 
 - (void)sendMessageToConversation:(CRConversation *)conversation message:(LYRMessage *)message client:(LYRClient *)client completionBlock:(void (^)(NSError *error))completionBlock {
@@ -168,5 +169,25 @@ NSString * const kMessageChangeNotification = @"MessageChange";
     }
 }
 
+- (NSString *)randomTreeNameCombination {
+   
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [defaults objectForKey:CRTreeNamesKey];
+    NSArray *existingTrees = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    NSArray *colors = @[@"Red", @"Green", @"Blue", @"Purple", @"Orange", @"Yellow", @"Violet", @"Pink", @"Gray", @"Brown", @"Cyan", @"Crimson" , @"Gold" , @"Silver" , @"Teal" , @"Azure", @"Turquoise", @"Lavender", @"Maroon", @"Tan", @"Magenta" , @"Indigo" , @"Jade", @"Scarlet", @"Amber"];
+    NSArray *trees = @[@"Acacia", @"Aspen" , @"Beech" , @"Birch" , @"Cedar" , @"Cypress", @"Ebony", @"Elm" , @"Eucalyptus", @"Fir", @"Grove" , @"Hazel" ,  @"Juniper" , @"Maple", @"Oak" , @"Palm", @"Poplar", @"Pine" , @"Sequoia" ,  @"Spruce", @"Sycamore", @"Sylvan",  @"Walnut", @"Willow", @"Yew"];
+    
+    NSString *name = [NSString stringWithFormat:@"%@ %@", colors[arc4random() % 25], trees[arc4random() % 25]];
 
+    if(existingTrees) {
+        while (![existingTrees containsObject:name]) {
+            name = [NSString stringWithFormat:@"%@ %@", colors[arc4random() % 25], trees[arc4random() % 25]];
+        }
+    }
+    
+    NSLog(@"name: %@", name);
+    return name;
+}
+ 
 @end

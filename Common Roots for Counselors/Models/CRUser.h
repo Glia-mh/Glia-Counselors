@@ -15,7 +15,9 @@
 @property (nonatomic, strong) NSString *userID;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *avatarString;
+//@property (nonatomic, strong) NSString *bio;
+@property (nonatomic, strong) NSString *schoolID;
 
--(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName;
+-(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName schoolID:(NSString *)schoolID;
 
 @end

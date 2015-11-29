@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <LayerKit/LayerKit.h>
 #import "CRConversation.h"
-#import "CRUser.h"
+#import "CRCounselor.h"
 #import "CRConversationsViewController.h"
 #import "CRAuthenticationManager.h"
 #import "CRConversationManager.h"

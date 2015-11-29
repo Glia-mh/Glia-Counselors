@@ -26,28 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
 
     counselorImageURLs = [[NSMutableArray alloc] init];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Counselors"];
-    self.counselorsCollectionView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.5];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            for(int i = 0; i < objects.count; i++){
-                NSString *imageurl = [objects[i] objectForKey:@"Photo_URL"];
-                
-                [counselorImageURLs addObject:imageurl];
-                [self.counselorsCollectionView reloadData];
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
     
     layerClient = [CRConversationManager layerClient];
     
@@ -67,19 +47,13 @@
         if(self.queryController.count != 0){
         messageLabel.alpha = 0;
         NSLog(@"Query fetched %tu conversation objects", [self.queryController numberOfObjectsInSection:0]);
-        self.conversationsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.conversationsTableView reloadData];
         }
     } else {
         NSLog(@"Query failed with error %@", error);
     }
     
-    self.navigationController.navigationBar.translucent = NO;
     self.conversationsTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(counselorsTapped:)];
-    tapRecognizer.numberOfTapsRequired = 1;
-    [self.counselorsCollectionView addGestureRecognizer:tapRecognizer];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -172,9 +146,9 @@
     
     UILabel *participantNameLabel = (UILabel *)[cell viewWithTag:2];
     
+#warning todo image is placeholder
     participantNameLabel.text = crConversation.participant.name;
-    [profile sd_setImageWithURL:[NSURL URLWithString:crConversation.participant.avatarString]
-                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    [profile setImage:[UIImage imageNamed:@"profile-placeholder"]];
     
     LYRMessage *latestMessage = crConversation.latestMessage;
     LYRMessagePart *latestMessagePart = latestMessage.parts[0];
@@ -235,21 +209,10 @@
     return @"End Chat";
 }
 
-- (void)counselorsViewControllerDismissedWithConversation:(CRConversation *)conversation {
-    loadedConversation = conversation;
-    [self performSegueWithIdentifier:PUSH_CHAT_VC_SEGUE sender:self];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:PUSH_CHAT_VC_SEGUE]) {
         CRChatViewController *chatVC = segue.destinationViewController;
         chatVC.conversation = loadedConversation;
-        
-    } else if ([segue.identifier isEqualToString:MODAL_COUNSELORS_VC_SEGUE]) {
-        UINavigationController *navController = [segue destinationViewController];
-        assert([([navController viewControllers][0]) isKindOfClass:[CRCounselorsViewController class]]);
-        CRCounselorsViewController *cVC = (CRCounselorsViewController *)([navController viewControllers][0]);
-        cVC.delegate = self;
         
     }
 }
@@ -294,40 +257,6 @@
     [self.conversationsTableView endUpdates];
 }
 
-#pragma mark collection view stuff
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    
-    return [counselorImageURLs count];
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    static NSString *identifier = @"CounselorCell";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    
-    UIImageView *avatarImageView = (UIImageView *)[cell viewWithTag: 100];
-    avatarImageView.contentMode = UIViewContentModeScaleAspectFill;
-    avatarImageView.layer.cornerRadius = avatarImageView.frame.size.height/2 ;
-    avatarImageView.layer.masksToBounds = YES;
-    [avatarImageView sd_setImageWithURL:[NSURL URLWithString:[counselorImageURLs objectAtIndex:indexPath.item]] placeholderImage:[UIImage imageNamed:@"placeholderIcon.png"]];
-    
-    return cell;
-}
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
-
-//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-//    return UIEdgeInsetsMake(10, 10, 10, 10);
-//}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
 - (IBAction)switchTapped:(id)sender {
     if ([self.availibleSwitch isOn]) {
         [self.availibleSwitch setOn:YES animated:YES];
@@ -361,4 +290,10 @@
         }];
     }
 }
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
+}
+
+
 @end

@@ -67,9 +67,16 @@
     NSLog(@"Client did de-authenticate the user");
 }
 
-- (void)authenticateUserID:(NSString *)userID completionBlock:(void (^)(BOOL authenticated))completionBlock {
-#warning implement this later
-    completionBlock(YES);
+- (void)authenticateUsername:(NSString *)username password:(NSString *)password completionBlock:(void (^)(PFUser *user, NSError *error))completionBlock {
+    [PFUser logInWithUsernameInBackground:username password:password
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            completionBlock(user, nil);
+                                        } else {
+                                            NSLog(@"Error with Parse Login: %@", error.description);
+                                            completionBlock(nil, error);
+                                        }
+                                    }];
 }
 
 - (void)authenticateLayerWithID:(NSString *)userID client:(LYRClient *)client completionBlock:(void (^)(NSString *authenticatedUserID, NSError *error))completionBlock {
@@ -168,16 +175,46 @@
     }] resume];
 }
 
-- (NSString*)md5String:(NSString*)input {
-    const char * pointer = [input UTF8String];
-    unsigned char md5Buffer[CC_MD5_DIGEST_LENGTH];
-    
-    CC_MD5(pointer, (CC_LONG)strlen(pointer), md5Buffer);
-    
-    NSMutableString * string = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
-        [string appendFormat:@"%02x",md5Buffer[i]];
-    
-    return string;
+- (void)logoutUserWithClient:(LYRClient *)client completion:(void(^)(NSError *error))completion
+{
+    [client deauthenticateWithCompletion:^(BOOL success, NSError *error) {
+        if(success) {
+            [CRAuthenticationManager sharedInstance].currentUser = nil;
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            
+            [defaults setObject:nil forKey:CRCurrentUserKey];
+            [defaults synchronize];
+            
+            completion(nil);
+        } else {
+            completion(error);
+        }
+    }];
 }
+
+- (NSString *)schoolNameForID:(NSString *)schoolID
+{
+    if([schoolID isEqualToString: @"1"]) return @"Saratoga High School:";
+    if([schoolID isEqualToString: @"2"]) return @"USC:";
+    else return @"";
+}
+
++ (CRCounselor *)loadCurrentUser
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [defaults objectForKey:CRCurrentUserKey];
+    [CRAuthenticationManager sharedInstance].currentUser = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    return [CRAuthenticationManager sharedInstance].currentUser;
+}
+
++ (NSString *)schoolID
+{
+    return [CRAuthenticationManager sharedInstance].currentUser.schoolID;
+}
+
++ (UIImage *)userImage
+{
+    return [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[CRAuthenticationManager sharedInstance].currentUser.avatarString]]];
+}
+
 @end

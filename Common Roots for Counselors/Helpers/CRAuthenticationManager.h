@@ -8,22 +8,31 @@
 
 #import <Foundation/Foundation.h>
 #import <LayerKit/LayerKit.h>
-#import "CRUser.h"
+#import "CRCounselor.h"
 #import <CommonCrypto/CommonDigest.h>
+
+static NSString *CRCurrentUserKey = @"CRCurrentUserKey";
 
 @interface CRAuthenticationManager : NSObject <LYRClientDelegate>
 
-@property (strong, nonatomic) CRUser *currentUser;
+@property (strong, nonatomic) CRCounselor *currentUser;
 
 + (CRAuthenticationManager *)sharedInstance;
 
-+ (CRUser *)currentUser;
++ (CRCounselor *)loadCurrentUser;
 
-- (void)authenticateUserID:(NSString *)userID completionBlock:(void (^)(BOOL authenticated))completionBlock;
++ (UIImage *)userImage;
+
++ (NSString *)schoolID;
+
+
+- (NSString *)schoolNameForID:(NSString *)schoolID;
+
+- (void)authenticateUsername:(NSString *)username password:(NSString *)password completionBlock:(void (^)(PFUser *user, NSError *error))completionBlock;
 
 - (void)authenticateLayerWithID:(NSString *)userID client:(LYRClient *)client completionBlock:(void (^)(NSString *authenticatedUserID, NSError *error))completionBlock;
 
-- (NSString*)md5String:(NSString*)input;
+- (void)logoutUserWithClient:(LYRClient *)client completion:(void(^)(NSError *error))completion;
 
 @end
 

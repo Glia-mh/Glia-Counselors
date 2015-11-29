@@ -9,10 +9,6 @@
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Medium</string>
             <string>AvenirNext-Regular</string>
-            <string>AvenirNext-Medium</string>
-            <string>AvenirNext-Regular</string>
-            <string>AvenirNext-Medium</string>
-            <string>AvenirNext-Medium</string>
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Regular</string>
@@ -20,20 +16,20 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--lol-->
+        <!--Navigation Controller-->
         <scene sceneID="3Kt-uc-tRY">
             <objects>
                 <navigationController id="Yct-kQ-12b" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="lol" id="SAg-or-fJw"/>
+                    <navigationItem key="navigationItem" id="SAg-or-fJw"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="OMT-Dc-2UX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.30980392156862746" green="0.61176470588235299" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="0.47450980390000003" green="0.81568627449999997" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
@@ -113,12 +109,12 @@
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="jMG-RJ-UDw">
                                 <rect key="frame" x="16" y="6" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="onTintColor" red="0.33725490200000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.52941176469999995" green="0.82745098039999998" blue="0.4039215686" alpha="0.90217513490000001" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="switchTapped:" destination="HNX-CP-iUp" eventType="valueChanged" id="W5m-QY-XSw"/>
                                 </connections>
                             </switch>
-                            <color key="tintColor" red="0.33725490200000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.47450980392156861" green="0.81568627450980391" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -126,14 +122,13 @@
                         <outlet property="availibleSwitch" destination="jMG-RJ-UDw" id="9bd-FH-5mV"/>
                         <outlet property="conversationsTableView" destination="i5j-q0-AKS" id="Wcr-hn-oko"/>
                         <segue destination="AOx-ez-wSV" kind="push" identifier="PushChatVC" id="QpN-AN-yUW"/>
-                        <segue destination="mfT-zG-aMC" kind="modal" identifier="ModalCounselorsVC" modalTransitionStyle="coverVertical" id="yjf-AE-gjn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oot-lc-PWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="297.5" y="529.5"/>
         </scene>
-        <!--Spencer-->
+        <!--Red Pine-->
         <scene sceneID="xr7-nl-FrJ">
             <objects>
                 <viewController storyboardIdentifier="ChatVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AOx-ez-wSV" customClass="CRChatViewController" sceneMemberID="viewController">
@@ -142,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Spencer" id="0Mv-bl-GF9">
+                    <navigationItem key="navigationItem" title="Red Pine" id="0Mv-bl-GF9">
                         <barButtonItem key="backBarButtonItem" title=" " id="3YH-Lo-tEv"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -151,137 +146,19 @@
             </objects>
             <point key="canvasLocation" x="715.5" y="520.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="P6g-1R-5zT">
+        <!--View Controller-->
+        <scene sceneID="7RG-Uv-PRy">
             <objects>
-                <navigationController id="mfT-zG-aMC" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sYv-co-xsy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.14117647059999999" green="0.57647058819999997" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="lH7-NS-9SQ" kind="relationship" relationship="rootViewController" id="UQY-wp-fXq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aMQ-SS-tTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-95.5" y="-250.5"/>
-        </scene>
-        <!--Counselors-->
-        <scene sceneID="Swb-I3-z6y">
-            <objects>
-                <viewController id="lH7-NS-9SQ" customClass="CRCounselorsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="pTG-zj-Oaw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="Igw-Cv-TM4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fYv-st-HHd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CounselorCell" rowHeight="90" id="L6P-a9-L3D">
-                                <rect key="frame" x="0.0" y="22" width="375" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L6P-a9-L3D" id="Fn0-i4-kYU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex Yeh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eo5-6Q-PN6">
-                                            <rect key="frame" x="92" y="8" width="210" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi this is a sample description about whatever and whatever" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="09N-9U-uBZ">
-                                            <rect key="frame" x="92" y="33" width="210" height="45"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="FgD-Lq-BE7">
-                                            <rect key="frame" x="8" y="8" width="70" height="70"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Counselors" id="17o-J8-FlW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="6A0-s0-AtK">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="close:" destination="lH7-NS-9SQ" id="LMz-rw-cRW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="tableView" destination="pTG-zj-Oaw" id="0yc-lZ-y7G"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bT9-6E-h77" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="502.5" y="-216.5"/>
-        </scene>
-        <!--LoginViewController-->
-        <scene sceneID="HnQ-AU-gJK">
-            <objects>
-                <viewController storyboardIdentifier="LoginVC" title="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="riz-2T-epl" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RVW-Yn-u5b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Counselor ID" textAlignment="center" minimumFontSize="17" id="B7i-1O-EeV">
-                                <rect key="frame" x="55" y="561" width="265" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="real students, real counselors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mgd-hj-rMy">
-                                <rect key="frame" x="74" y="55" width="226" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="common roots" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z8l-UQ-rmk">
-                                <rect key="frame" x="70" y="28" width="235" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="35"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FbE-e4-kCZ">
-                                <rect key="frame" x="55" y="488" width="265" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
-                                <state key="normal" title="Login as Counselor">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginTapped:" destination="riz-2T-epl" eventType="touchUpInside" id="3iZ-JR-OK2"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.54117647059999996" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="loginButton" destination="FbE-e4-kCZ" id="1Vq-wv-3Zb"/>
-                        <outlet property="sloganLabel" destination="mgd-hj-rMy" id="akz-gw-6dE"/>
-                        <outlet property="studentIDTextField" destination="B7i-1O-EeV" id="LPM-AY-4MN"/>
-                        <outlet property="titleLabel" destination="Z8l-UQ-rmk" id="QBc-vg-tvc"/>
-                        <segue destination="Yct-kQ-12b" kind="modal" identifier="presentConversationsAnimated" modalTransitionStyle="crossDissolve" id="zdW-Zb-mcQ"/>
-                        <segue destination="Yct-kQ-12b" kind="modal" identifier="presentConversationsNotAnimated" modalTransitionStyle="crossDissolve" id="5ai-OG-MjI"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sno-5N-syn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rEN-Ff-1vQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-527.5" y="529.5"/>
+            <point key="canvasLocation" x="-460" y="23"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rhm-hr-3ZN">
@@ -350,17 +227,19 @@
                         <outlet property="emailField" destination="FVT-Yo-5z1" id="lT0-gy-QHc"/>
                         <outlet property="loginButton" destination="1JM-HE-8j2" id="Q0q-R4-z9y"/>
                         <outlet property="passwordField" destination="l2U-On-bIa" id="9nI-tO-bh5"/>
+                        <segue destination="Yct-kQ-12b" kind="modal" identifier="ModalConversationsVC" id="5i1-9x-kXw"/>
+                        <segue destination="Yct-kQ-12b" kind="modal" identifier="ModalConversationsVCNotAnimated" animates="NO" id="jJZ-go-6aR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPg-WB-Ix3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-980.5" y="320.5"/>
+            <point key="canvasLocation" x="-713.5" y="445.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="text-logo" width="409" height="751"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zdW-Zb-mcQ"/>
+        <segue reference="jJZ-go-6aR"/>
     </inferredMetricsTieBreakers>
 </document>

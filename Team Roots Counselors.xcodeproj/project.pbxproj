@@ -16,7 +16,6 @@
 		6C7341191A74DFA500C078B1 /* UIColor+Common_Roots.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7340FE1A74DFA500C078B1 /* UIColor+Common_Roots.m */; };
 		6C73411A1A74DFA500C078B1 /* CRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341011A74DFA500C078B1 /* CRChatViewController.m */; };
 		6C73411B1A74DFA500C078B1 /* CRConversationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341031A74DFA500C078B1 /* CRConversationsViewController.m */; };
-		6C73411C1A74DFA500C078B1 /* CRCounselorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341051A74DFA500C078B1 /* CRCounselorsViewController.m */; };
 		6C73411D1A74DFA500C078B1 /* CRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341071A74DFA500C078B1 /* CRLoginViewController.m */; };
 		6C73411E1A74DFA500C078B1 /* CRAuthenticationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73410A1A74DFA500C078B1 /* CRAuthenticationManager.m */; };
 		6C73411F1A74DFA500C078B1 /* CRConversationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73410C1A74DFA500C078B1 /* CRConversationManager.m */; };
@@ -44,14 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C7340D31A74DF1100C078B1 /* Team Roots for Counselors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Team Roots for Counselors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C7340D31A74DF1100C078B1 /* Team Roots Counselors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Team Roots Counselors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7340D71A74DF1100C078B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C7340D81A74DF1100C078B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C7340DA1A74DF1100C078B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C7340DB1A74DF1100C078B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6C7340E11A74DF1100C078B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C7340E31A74DF1100C078B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6C7340EC1A74DF1200C078B1 /* Team Roots for Counselors.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Team Roots for Counselors.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C7340EC1A74DF1200C078B1 /* Team Roots Counselors.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Team Roots Counselors.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7340F11A74DF1200C078B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C7340F21A74DF1200C078B1 /* Common_Roots_for_CounselorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Common_Roots_for_CounselorsTests.m; sourceTree = "<group>"; };
 		6C7340FD1A74DFA500C078B1 /* UIColor+Common_Roots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Common_Roots.h"; sourceTree = "<group>"; };
@@ -60,8 +59,6 @@
 		6C7341011A74DFA500C078B1 /* CRChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRChatViewController.m; sourceTree = "<group>"; };
 		6C7341021A74DFA500C078B1 /* CRConversationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRConversationsViewController.h; sourceTree = "<group>"; };
 		6C7341031A74DFA500C078B1 /* CRConversationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRConversationsViewController.m; sourceTree = "<group>"; };
-		6C7341041A74DFA500C078B1 /* CRCounselorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCounselorsViewController.h; sourceTree = "<group>"; };
-		6C7341051A74DFA500C078B1 /* CRCounselorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCounselorsViewController.m; sourceTree = "<group>"; };
 		6C7341061A74DFA500C078B1 /* CRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLoginViewController.h; sourceTree = "<group>"; };
 		6C7341071A74DFA500C078B1 /* CRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLoginViewController.m; sourceTree = "<group>"; };
 		6C7341091A74DFA500C078B1 /* CRAuthenticationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRAuthenticationManager.h; sourceTree = "<group>"; };
@@ -138,8 +135,8 @@
 		6C7340D41A74DF1100C078B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C7340D31A74DF1100C078B1 /* Team Roots for Counselors.app */,
-				6C7340EC1A74DF1200C078B1 /* Team Roots for Counselors.xctest */,
+				6C7340D31A74DF1100C078B1 /* Team Roots Counselors.app */,
+				6C7340EC1A74DF1200C078B1 /* Team Roots Counselors.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,14 +197,12 @@
 		6C7340FF1A74DFA500C078B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6C7341001A74DFA500C078B1 /* CRChatViewController.h */,
-				6C7341011A74DFA500C078B1 /* CRChatViewController.m */,
-				6C7341021A74DFA500C078B1 /* CRConversationsViewController.h */,
-				6C7341031A74DFA500C078B1 /* CRConversationsViewController.m */,
-				6C7341041A74DFA500C078B1 /* CRCounselorsViewController.h */,
-				6C7341051A74DFA500C078B1 /* CRCounselorsViewController.m */,
 				6C7341061A74DFA500C078B1 /* CRLoginViewController.h */,
 				6C7341071A74DFA500C078B1 /* CRLoginViewController.m */,
+				6C7341021A74DFA500C078B1 /* CRConversationsViewController.h */,
+				6C7341031A74DFA500C078B1 /* CRConversationsViewController.m */,
+				6C7341001A74DFA500C078B1 /* CRChatViewController.h */,
+				6C7341011A74DFA500C078B1 /* CRChatViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -286,9 +281,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6C7340D21A74DF1100C078B1 /* Team Roots for Counselors */ = {
+		6C7340D21A74DF1100C078B1 /* Team Roots Counselors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C7340F61A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots for Counselors" */;
+			buildConfigurationList = 6C7340F61A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots Counselors" */;
 			buildPhases = (
 				0EDE4003D1B3EC59F9C8ACD0 /* Check Pods Manifest.lock */,
 				6C7340CF1A74DF1100C078B1 /* Sources */,
@@ -300,14 +295,14 @@
 			);
 			dependencies = (
 			);
-			name = "Team Roots for Counselors";
+			name = "Team Roots Counselors";
 			productName = "Common Roots for Counselors";
-			productReference = 6C7340D31A74DF1100C078B1 /* Team Roots for Counselors.app */;
+			productReference = 6C7340D31A74DF1100C078B1 /* Team Roots Counselors.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6C7340EB1A74DF1200C078B1 /* Team Roots for CounselorsTests */ = {
+		6C7340EB1A74DF1200C078B1 /* Team Roots CounselorsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C7340F91A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots for CounselorsTests" */;
+			buildConfigurationList = 6C7340F91A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots CounselorsTests" */;
 			buildPhases = (
 				6C7340E81A74DF1200C078B1 /* Sources */,
 				6C7340E91A74DF1200C078B1 /* Frameworks */,
@@ -318,9 +313,9 @@
 			dependencies = (
 				6C7340EE1A74DF1200C078B1 /* PBXTargetDependency */,
 			);
-			name = "Team Roots for CounselorsTests";
+			name = "Team Roots CounselorsTests";
 			productName = "Common Roots for CounselorsTests";
-			productReference = 6C7340EC1A74DF1200C078B1 /* Team Roots for Counselors.xctest */;
+			productReference = 6C7340EC1A74DF1200C078B1 /* Team Roots Counselors.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -341,7 +336,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6C7340CE1A74DF1100C078B1 /* Build configuration list for PBXProject "Team Roots for Counselors" */;
+			buildConfigurationList = 6C7340CE1A74DF1100C078B1 /* Build configuration list for PBXProject "Team Roots Counselors" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -354,8 +349,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6C7340D21A74DF1100C078B1 /* Team Roots for Counselors */,
-				6C7340EB1A74DF1200C078B1 /* Team Roots for CounselorsTests */,
+				6C7340D21A74DF1100C078B1 /* Team Roots Counselors */,
+				6C7340EB1A74DF1200C078B1 /* Team Roots CounselorsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -425,7 +420,6 @@
 				B258B4391A758A0000B087BB /* RTSpinKitPulseAnimation.m in Sources */,
 				6C7341241A74DFA500C078B1 /* CRLocalNotificationView.m in Sources */,
 				6C7341191A74DFA500C078B1 /* UIColor+Common_Roots.m in Sources */,
-				6C73411C1A74DFA500C078B1 /* CRCounselorsViewController.m in Sources */,
 				6C73411D1A74DFA500C078B1 /* CRLoginViewController.m in Sources */,
 				6C73411E1A74DFA500C078B1 /* CRAuthenticationManager.m in Sources */,
 				6C7341211A74DFA500C078B1 /* CRConversation.m in Sources */,
@@ -453,7 +447,7 @@
 /* Begin PBXTargetDependency section */
 		6C7340EE1A74DF1200C078B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6C7340D21A74DF1100C078B1 /* Team Roots for Counselors */;
+			target = 6C7340D21A74DF1100C078B1 /* Team Roots Counselors */;
 			targetProxy = 6C7340ED1A74DF1200C078B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -556,7 +550,7 @@
 				INFOPLIST_FILE = "Common Roots for Counselors/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Team Roots for Counselors";
+				PRODUCT_NAME = "Team Roots Counselors";
 			};
 			name = Debug;
 		};
@@ -568,7 +562,7 @@
 				INFOPLIST_FILE = "Common Roots for Counselors/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Team Roots for Counselors";
+				PRODUCT_NAME = "Team Roots Counselors";
 			};
 			name = Release;
 		};
@@ -586,8 +580,8 @@
 				);
 				INFOPLIST_FILE = "Common Roots for CounselorsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "Team Roots for Counselors";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Team Roots for Counselors.app/Team Roots for Counselors";
+				PRODUCT_NAME = "Team Roots Counselors";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Team Roots Counselors.app/Team Roots Counselors";
 			};
 			name = Debug;
 		};
@@ -601,15 +595,15 @@
 				);
 				INFOPLIST_FILE = "Common Roots for CounselorsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "Team Roots for Counselors";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Team Roots for Counselors.app/Team Roots for Counselors";
+				PRODUCT_NAME = "Team Roots Counselors";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Team Roots Counselors.app/Team Roots Counselors";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6C7340CE1A74DF1100C078B1 /* Build configuration list for PBXProject "Team Roots for Counselors" */ = {
+		6C7340CE1A74DF1100C078B1 /* Build configuration list for PBXProject "Team Roots Counselors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C7340F41A74DF1200C078B1 /* Debug */,
@@ -618,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C7340F61A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots for Counselors" */ = {
+		6C7340F61A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots Counselors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C7340F71A74DF1200C078B1 /* Debug */,
@@ -627,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C7340F91A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots for CounselorsTests" */ = {
+		6C7340F91A74DF1200C078B1 /* Build configuration list for PBXNativeTarget "Team Roots CounselorsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C7340FA1A74DF1200C078B1 /* Debug */,

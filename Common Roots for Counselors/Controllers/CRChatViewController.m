@@ -26,21 +26,6 @@ static NSString *const MIMETypeTextPlain = @"text/plain";
     
     layerClient = [CRConversationManager layerClient];
     
-    LYRQuery *query = [LYRQuery queryWithClass:[LYRMessage class]];
-    query.predicate = [LYRPredicate predicateWithProperty:@"conversation" operator:LYRPredicateOperatorIsEqualTo value:self.conversation.layerConversation];
-    query.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"index" ascending:YES]];
-    self.queryController = [layerClient queryControllerWithQuery:query];
-    self.queryController.delegate = self;
-    
-    NSError *error;
-    BOOL success = [self.queryController execute:&error];
-    if (success) {
-        NSLog(@"Query fetched %tu message objects", [self.queryController numberOfObjectsInSection:0]);
-        [self.collectionView reloadData];
-    } else {
-        NSLog(@"Query failed with error %@", error);
-    }
-    
     self.title = self.conversation.participant.name;
 
     self.senderId = [CRAuthenticationManager sharedInstance].currentUser.userID;
@@ -48,9 +33,10 @@ static NSString *const MIMETypeTextPlain = @"text/plain";
     
     NSLog(@"Loaded JSQ with participant: %@", self.conversation.participant.name);
     
-    JSQMessagesAvatarImage *userImage = [JSQMessagesAvatarImageFactory avatarImageWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[CRAuthenticationManager sharedInstance].currentUser.avatarString]]] diameter:kJSQMessagesCollectionViewAvatarSizeDefault];
+    JSQMessagesAvatarImage *userImage = [JSQMessagesAvatarImageFactory avatarImageWithImage:[UIImage imageNamed:@"profile-placeholder"] diameter:kJSQMessagesCollectionViewAvatarSizeDefault];
     
-    JSQMessagesAvatarImage *participantImage = [JSQMessagesAvatarImageFactory avatarImageWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.conversation.participant.avatarString]]] diameter:kJSQMessagesCollectionViewAvatarSizeDefault];
+#warning todo right now the user image is just a placeholder, eventually have colored trees
+    JSQMessagesAvatarImage *participantImage = [JSQMessagesAvatarImageFactory avatarImageWithImage:[UIImage imageNamed:@"profile-placeholder"] diameter:kJSQMessagesCollectionViewAvatarSizeDefault];
     
     self.avatars = @{ self.senderId : userImage,
                       self.conversation.participant.userID : participantImage};
@@ -65,6 +51,20 @@ static NSString *const MIMETypeTextPlain = @"text/plain";
     
     self.inputToolbar.contentView.leftBarButtonItem = nil;
 
+    LYRQuery *query = [LYRQuery queryWithClass:[LYRMessage class]];
+    query.predicate = [LYRPredicate predicateWithProperty:@"conversation" operator:LYRPredicateOperatorIsEqualTo value:self.conversation.layerConversation];
+    query.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"index" ascending:YES]];
+    self.queryController = [layerClient queryControllerWithQuery:query];
+    self.queryController.delegate = self;
+    
+    NSError *error;
+    BOOL success = [self.queryController execute:&error];
+    if (success) {
+        NSLog(@"Query fetched %tu message objects", [self.queryController numberOfObjectsInSection:0]);
+        [self.collectionView reloadData];
+    } else {
+        NSLog(@"Query failed with error %@", error);
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -479,5 +479,10 @@ static NSString *const MIMETypeTextPlain = @"text/plain";
 
     
 }
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
+}
+
 
 @end

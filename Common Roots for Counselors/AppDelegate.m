@@ -13,6 +13,7 @@
 #import "CRLoginViewController.h"
 #import "CRConversationManager.h"
 #import "CRChatViewController.h"
+#import "UIColor+Common_Roots.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +26,7 @@
     [self.window makeKeyAndVisible];
     
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"AvenirNext-Regular" size:25.0],
-                                                           NSFontAttributeName, [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0],
+                                                           NSFontAttributeName, [UIColor teamRootsGreen],
                                                            NSForegroundColorAttributeName,  nil]];
     CGFloat verticalOffset = 1;
     [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:verticalOffset forBarMetrics:UIBarMetricsDefault];

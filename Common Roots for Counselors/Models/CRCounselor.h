@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CRUser.h"
 
-@interface CRCounselor : NSObject
+@interface CRCounselor : CRUser
+
+@property (nonatomic, strong) NSString *counselorBio;
+
+-(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName bio:(NSString *)aBio schoolID:(NSString *)schoolID;
 
 @end

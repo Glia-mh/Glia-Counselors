@@ -14,6 +14,8 @@
 #import "CRNetworkRequest.h"
 #import "CRAuthenticationManager.h"
 
+static NSString *CRTreeNamesKey = @"CRTreeNamesKey";
+
 extern NSString *const kConversationChangeNotification;
 extern NSString *const kMessageChangeNotification;
 
@@ -25,7 +27,6 @@ extern NSString *const kMessageChangeNotification;
 
 + (LYRClient *)layerClient;
 
-- (void)conversationsForLayerClient:(LYRClient *)client completionBlock:(void (^)(NSArray *conversations, NSError *error))completionBlock;
 
 - (CRConversation *)CRConversationForLayerConversation:(LYRConversation *)lyrConversation client:(LYRClient *)client;
 
