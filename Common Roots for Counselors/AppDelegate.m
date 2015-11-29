@@ -58,7 +58,7 @@
     }
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    self.window.tintColor = [UIColor whiteColor];
+    self.window.tintColor = [UIColor teamRootsGreen];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveLayerObjectsDidChangeNotification:)
