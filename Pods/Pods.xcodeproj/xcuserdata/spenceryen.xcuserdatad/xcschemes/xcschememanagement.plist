@@ -4,47 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-BlurImageProcessor.xcscheme</key>
+		<key>BlurImageProcessor.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Bolts.xcscheme</key>
+		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Facebook-iOS-SDK.xcscheme</key>
+		<key>JSQMessagesViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-JSQMessagesViewController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-JSQSystemSoundPlayer.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-LayerKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Parse-iOS.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ParseFacebookUtils.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SDWebImage.xcscheme</key>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -54,55 +29,50 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>246CA8B98E611DB9861CAF68</key>
+		<key>025742A57EE3D538ACD06BE97BAA5A35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>323EFB388AA5740824BD7C81</key>
+		<key>157130DA3B5790A62C9285580B1793C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5679DA60AB75F61A265D9C8D</key>
+		<key>2B7ED1BD4422C03C453505470F57BE00</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>640A59A94D186B4FAE4EE323</key>
+		<key>A47D185A9451BA2DABFA06D959FA73C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>929C0166B32C20C360D65ACD</key>
+		<key>AC7074C39013E27308DECCDBEED38B68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A64D46591F8D1C6CDB928631</key>
+		<key>F0E4F6B075A645E5774B2F9806E9DDD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2320219AE0147C95C810091</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B3D81FC9C24B5FCA074DDC67</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C5C52989946A140C60E1C986</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C95ED5AA7274F005FADF9089</key>
+		<key>F3EFE8A9C7D1652BC2FDB3853A1F58A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

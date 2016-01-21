@@ -17,7 +17,8 @@
 @property (nonatomic, strong) NSString *avatarString;
 //@property (nonatomic, strong) NSString *bio;
 @property (nonatomic, strong) NSString *schoolID;
+@property (nonatomic, strong) NSString *schoolName;
 
--(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName schoolID:(NSString *)schoolID;
+-(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName schoolID:(NSString *)schoolID schoolName:(NSString *)schoolName;
 
 @end

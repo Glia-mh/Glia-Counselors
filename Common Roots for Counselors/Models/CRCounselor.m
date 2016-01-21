@@ -10,8 +10,8 @@
 
 @implementation CRCounselor
 
--(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName bio:(NSString *)aBio schoolID:(NSString *)schoolID {
-    self = [super initWithID:ID avatarString:aAvatarString name:aName schoolID:schoolID];
+-(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName bio:(NSString *)aBio schoolID:(NSString *)schoolID schoolName:(NSString *)schoolName{
+    self = [super initWithID:ID avatarString:aAvatarString name:aName schoolID:schoolID schoolName:schoolName];
     if(self) {
         self.counselorBio = aBio;
     }
@@ -25,6 +25,7 @@
     [encoder encodeObject:self.name forKey:@"name"];
     [encoder encodeObject:self.counselorBio forKey:@"bio"];
     [encoder encodeObject:self.schoolID forKey:@"schoolID"];
+    [encoder encodeObject:self.schoolName forKey:@"schoolName"];
 }
 
 -(id)initWithCoder:(NSCoder *)decoder {
@@ -38,6 +39,7 @@
     self.name = [decoder decodeObjectForKey:@"name"];
     self.counselorBio = [decoder decodeObjectForKey:@"bio"];
     self.schoolID = [decoder decodeObjectForKey:@"schoolID"];
+    self.schoolName = [decoder decodeObjectForKey:@"schoolName"];
     
     return self;
 }

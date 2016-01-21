@@ -9,6 +9,7 @@
 #import "CRLoginViewController.h"
 #import "RTSpinKitView.h"
 #import "UIColor+Common_Roots.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface CRLoginViewController ()
 
@@ -64,22 +65,29 @@
 }
 
 - (IBAction)loginTapped:(id)sender {
+    [SVProgressHUD show];
     
     if(self.emailField.text.length != 0 && self.passwordField.text.length != 0) {
         [[CRAuthenticationManager sharedInstance] authenticateUsername:self.emailField.text password:self.passwordField.text completionBlock:^(PFUser *user, NSError *error) {
+
             if(user && !error) {
                 NSLog(@"authed with parse, id: %@", user.objectId);
                 [[CRAuthenticationManager sharedInstance] authenticateLayerWithID:user.objectId client:client completionBlock:^(NSString *authenticatedUserID, NSError *error) {
-                    [CRAuthenticationManager sharedInstance].currentUser = [[CRCounselor alloc] initWithID:user.objectId avatarString:[user objectForKey:@"photoURL"] name:[user objectForKey:@"name"] bio:[user objectForKey:@"bio"] schoolID:[user objectForKey:@"schoolID"]];
+                    PFObject *school = [user objectForKey:@"schoolID"];
+                    
+                    [CRAuthenticationManager sharedInstance].currentUser = [[CRCounselor alloc] initWithID:user.objectId avatarString:[user objectForKey:@"photoURL"] name:[user objectForKey:@"name"] bio:[user objectForKey:@"bio"] schoolID:school.objectId schoolName:[[CRAuthenticationManager sharedInstance] schoolNameForID:school.objectId]];
 
                     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:[CRAuthenticationManager sharedInstance].currentUser];
                     [defaults setObject:data forKey:CRCurrentUserKey];
                     [defaults synchronize];
+                    [SVProgressHUD dismiss];
 
                     [self presentConversationsViewControllerAnimated:YES];
                 }];
             } else {
+                [SVProgressHUD dismiss];
+
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops, Parse login error" message:error.description delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];
             }

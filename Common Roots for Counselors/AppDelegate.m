@@ -14,6 +14,7 @@
 #import "CRConversationManager.h"
 #import "CRChatViewController.h"
 #import "UIColor+Common_Roots.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface AppDelegate ()
 
@@ -35,6 +36,9 @@
                   clientKey:@"BOOijRRSKlKh5ogT2IaacnnK2eHJZqt8L30VPIcc"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [SVProgressHUD setForegroundColor:[UIColor teamRootsGreen]];
+    //[SVProgressHUD setBackgroundColor:[UIColor clearColor]];
     
     LYRClient *layerClient = [CRConversationManager layerClient];
     

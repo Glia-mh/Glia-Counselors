@@ -192,13 +192,6 @@
     }];
 }
 
-- (NSString *)schoolNameForID:(NSString *)schoolID
-{
-    if([schoolID isEqualToString: @"1"]) return @"Saratoga High School:";
-    if([schoolID isEqualToString: @"2"]) return @"USC:";
-    else return @"";
-}
-
 + (CRCounselor *)loadCurrentUser
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -207,9 +200,20 @@
     return [CRAuthenticationManager sharedInstance].currentUser;
 }
 
+- (NSString *)schoolNameForID:(NSString *)schoolID {
+    PFQuery *query = [PFQuery queryWithClassName:@"SchoolIDs"];
+    PFObject *school = [query getObjectWithId:schoolID];
+    return [school objectForKey:@"SchoolName"];
+}
+
 + (NSString *)schoolID
 {
     return [CRAuthenticationManager sharedInstance].currentUser.schoolID;
+}
+
++ (NSString *)schoolName
+{
+    return [CRAuthenticationManager sharedInstance].currentUser.schoolName;
 }
 
 + (UIImage *)userImage

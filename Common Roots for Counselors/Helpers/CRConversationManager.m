@@ -86,7 +86,7 @@ NSString * const kMessageChangeNotification = @"MessageChange";
             [lyrConversation setValuesForMetadataKeyPathsWithDictionary:metadata merge:YES];
         }
 
-        CRUser *participant = [[CRUser alloc] initWithID:[lyrConversation.metadata valueForKey:@"student.ID"] avatarString:[lyrConversation.metadata valueForKey:@"student.avatarString"] name:[lyrConversation.metadata valueForKey:@"student.name"] schoolID:[CRAuthenticationManager schoolID]];
+        CRUser *participant = [[CRUser alloc] initWithID:[lyrConversation.metadata valueForKey:@"student.ID"] avatarString:[lyrConversation.metadata valueForKey:@"student.avatarString"] name:[lyrConversation.metadata valueForKey:@"student.name"] schoolID:[CRAuthenticationManager schoolID] schoolName:[CRAuthenticationManager schoolName]];
         NSLog(@"participaant name: %@", participant.name);
         
         CRConversation *crConversation = [[CRConversation alloc] initWithParticipant:participant conversation:lyrConversation messages:messages latestMessage:latestMessage unread:unread];
@@ -127,7 +127,7 @@ NSString * const kMessageChangeNotification = @"MessageChange";
         [lyrConversation setValue:studentName forMetadataAtKeyPath:@"student.name"];
     }
     
-    CRUser *participant = [[CRUser alloc] initWithID:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"ID"] avatarString:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"avatarString"] name:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"name"] schoolID:[CRAuthenticationManager schoolID]];
+    CRUser *participant = [[CRUser alloc] initWithID:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"ID"] avatarString:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"avatarString"] name:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"name"] schoolID:[CRAuthenticationManager schoolID] schoolName:[CRAuthenticationManager schoolName]];
     NSLog(@"participaant name: %@", participant.name);
     
     CRConversation *crConversation = [[CRConversation alloc] initWithParticipant:participant conversation:lyrConversation messages:messages latestMessage:latestMessage unread:unread];

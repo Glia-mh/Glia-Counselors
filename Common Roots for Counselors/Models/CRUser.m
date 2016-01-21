@@ -10,13 +10,14 @@
 
 @implementation CRUser
 
--(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName schoolID:(NSString *)schoolID {
+-(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName schoolID:(NSString *)schoolID schoolName:(NSString *)schoolName {
     self = [super init];
     if(self) {
         self.userID = ID;
         self.avatarString = aAvatarString;
         self.name = aName;
         self.schoolID = schoolID;
+        self.schoolName = schoolName;
         //self.bio = aBio;
     }
     
@@ -28,8 +29,7 @@
     [encoder encodeObject:self.avatarString forKey:@"avatarString"];
     [encoder encodeObject:self.name forKey:@"name"];
     [encoder encodeObject:self.schoolID forKey:@"schoolID"];
-    //   [encoder encodeObject:self.bio forKey:@"bio"];
-    
+    [encoder encodeObject:self.schoolName forKey:@"schoolName"];
 }
 
 -(id)initWithCoder:(NSCoder *)decoder {
@@ -42,7 +42,7 @@
     self.avatarString = [decoder decodeObjectForKey:@"avatarString"];
     self.name = [decoder decodeObjectForKey:@"name"];
     self.schoolID = [decoder decodeObjectForKey:@"schoolID"];
-    // self.bio = [decoder decodeObjectForKey:@"bio"];
+    self.schoolName = [decoder decodeObjectForKey:@"schoolName"];
     
     return self;
 }

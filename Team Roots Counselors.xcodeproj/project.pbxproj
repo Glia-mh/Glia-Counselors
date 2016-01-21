@@ -24,6 +24,7 @@
 		6C7341221A74DFA500C078B1 /* CRCounselor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341131A74DFA500C078B1 /* CRCounselor.m */; };
 		6C7341231A74DFA500C078B1 /* CRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341151A74DFA500C078B1 /* CRUser.m */; };
 		6C7341241A74DFA500C078B1 /* CRLocalNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7341181A74DFA500C078B1 /* CRLocalNotificationView.m */; };
+		6CC295C81C51765A00F0B813 /* CRSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC295C71C51765A00F0B813 /* CRSettingsViewController.m */; };
 		B258B4371A758A0000B087BB /* RTSpinKitArcAltAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B258B42B1A758A0000B087BB /* RTSpinKitArcAltAnimation.m */; };
 		B258B4381A758A0000B087BB /* RTSpinKitBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B258B42D1A758A0000B087BB /* RTSpinKitBounceAnimation.m */; };
 		B258B4391A758A0000B087BB /* RTSpinKitPulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B258B42F1A758A0000B087BB /* RTSpinKitPulseAnimation.m */; };
@@ -75,6 +76,8 @@
 		6C7341151A74DFA500C078B1 /* CRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRUser.m; sourceTree = "<group>"; };
 		6C7341171A74DFA500C078B1 /* CRLocalNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLocalNotificationView.h; sourceTree = "<group>"; };
 		6C7341181A74DFA500C078B1 /* CRLocalNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLocalNotificationView.m; sourceTree = "<group>"; };
+		6CC295C61C51765A00F0B813 /* CRSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSettingsViewController.h; sourceTree = "<group>"; };
+		6CC295C71C51765A00F0B813 /* CRSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSettingsViewController.m; sourceTree = "<group>"; };
 		750A4D7E8CE085187EFCE1D9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B258B42A1A758A0000B087BB /* RTSpinKitArcAltAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitArcAltAnimation.h; sourceTree = "<group>"; };
 		B258B42B1A758A0000B087BB /* RTSpinKitArcAltAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitArcAltAnimation.m; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				6C7341031A74DFA500C078B1 /* CRConversationsViewController.m */,
 				6C7341001A74DFA500C078B1 /* CRChatViewController.h */,
 				6C7341011A74DFA500C078B1 /* CRChatViewController.m */,
+				6CC295C61C51765A00F0B813 /* CRSettingsViewController.h */,
+				6CC295C71C51765A00F0B813 /* CRSettingsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				6C7340D01A74DF1100C078B1 /* Frameworks */,
 				6C7340D11A74DF1100C078B1 /* Resources */,
 				5794556E6CD366BBE7330A37 /* Copy Pods Resources */,
+				E3706C1E51063B4D2F40DD78 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -405,6 +411,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E3706C1E51063B4D2F40DD78 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -414,6 +435,7 @@
 			files = (
 				B258B4371A758A0000B087BB /* RTSpinKitArcAltAnimation.m in Sources */,
 				6C73411B1A74DFA500C078B1 /* CRConversationsViewController.m in Sources */,
+				6CC295C81C51765A00F0B813 /* CRSettingsViewController.m in Sources */,
 				B258B43A1A758A0000B087BB /* RTSpinKitCircleFlipAnimation.m in Sources */,
 				6C7341201A74DFA500C078B1 /* CRNetworkRequest.m in Sources */,
 				B258B43C1A758A0000B087BB /* RTSpinKitUtils.m in Sources */,

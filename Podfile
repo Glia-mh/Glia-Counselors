@@ -8,5 +8,4 @@ pod 'JSQMessagesViewController', :git => 'https://github.com/spenciefy/JSQMessag
 pod 'BlurImageProcessor'
 pod 'Parse-iOS', '~> 1.2.21'
 pod 'SDWebImage', '~>3.6'
-pod 'Facebook-iOS-SDK'
-pod 'ParseFacebookUtils', '~> 1.2.21'
+pod 'SVProgressHUD', '~> 1.1.3'

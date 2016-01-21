@@ -13,6 +13,6 @@
 
 @property (nonatomic, strong) NSString *counselorBio;
 
--(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName bio:(NSString *)aBio schoolID:(NSString *)schoolID;
+-(id)initWithID:(NSString *)ID avatarString:(NSString *)aAvatarString name:(NSString *)aName bio:(NSString *)aBio schoolID:(NSString *)schoolID schoolName:(NSString *)schoolName;
 
 @end
