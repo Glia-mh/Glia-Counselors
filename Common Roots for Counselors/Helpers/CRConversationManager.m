@@ -36,70 +36,6 @@ NSString * const kMessageChangeNotification = @"MessageChange";
     return _layerClient;
 }
 
-//out of use
-- (void)conversationsForLayerClient:(LYRClient *)client completionBlock:(void (^)(NSArray *conversations, NSError *error))completionBlock {
-    LYRQuery *query = [LYRQuery queryWithClass:[LYRConversation class]];
-    
-    NSError *error;
-    NSOrderedSet *conversations = [client executeQuery:query error:&error];
-    if (!error) {
-        NSLog(@"Retrieved %tu conversations", conversations.count);
-    } else {
-        NSLog(@"Query failed with error %@", error);
-    }
-    
-    NSMutableArray *conversationsArray = [[NSMutableArray alloc] init];
-    
-    for (LYRConversation *lyrConversation in conversations) {
-        
-        LYRQuery *query = [LYRQuery queryWithClass:[LYRMessage class]];
-        query.predicate = [LYRPredicate predicateWithProperty:@"conversation" operator:LYRPredicateOperatorIsEqualTo value:lyrConversation];
-        query.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"index" ascending:YES]];
-        
-        NSError *error;
-        NSOrderedSet *messages = [client executeQuery:query error:&error];
-        if (!error) {
-            NSLog(@"%tu messages in conversation", messages.count);
-        } else {
-            NSLog(@"Query failed with error %@", error);
-        }
-        
-        LYRMessage *latestMessage = [messages lastObject];
-
-        BOOL unread;
-        if(LYRRecipientStatusRead == [latestMessage recipientStatusForUserID:[[CRAuthenticationManager sharedInstance] currentUser].userID])  {
-            unread = NO;
-        } else {
-            unread = YES;
-        }
-        
-        NSString *studentName = [lyrConversation.metadata valueForKey:@"student.name"];
-        
-        if(studentName.length == 0){
-            studentName = [self randomTreeNameCombination];
-            NSDictionary *metadata = @{  @"student" : @{
-                                               @"name" : studentName,
-                                               @"ID" : [lyrConversation.metadata valueForKey:@"student.ID"],
-                                               @"avatarString" : [lyrConversation.metadata valueForKey:@"student.avatarString"]}
-                                       };
-            
-            [lyrConversation setValuesForMetadataKeyPathsWithDictionary:metadata merge:YES];
-        }
-
-        CRUser *participant = [[CRUser alloc] initWithID:[lyrConversation.metadata valueForKey:@"student.ID"] avatarString:[lyrConversation.metadata valueForKey:@"student.avatarString"] name:[lyrConversation.metadata valueForKey:@"student.name"] schoolID:[CRAuthenticationManager schoolID] schoolName:[CRAuthenticationManager schoolName]];
-        NSLog(@"participaant name: %@", participant.name);
-        
-        CRConversation *crConversation = [[CRConversation alloc] initWithParticipant:participant conversation:lyrConversation messages:messages latestMessage:latestMessage unread:unread];
-        
-        [conversationsArray addObject:crConversation];
-        
-        if(conversationsArray.count == conversations.count) {
-            NSArray *orderedConversations = [conversationsArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"lastModified" ascending:NO]]];
-            completionBlock(orderedConversations, nil);
-        }
-    }
-}
-
 - (CRConversation *)CRConversationForLayerConversation:(LYRConversation *)lyrConversation client:(LYRClient *)client {
     LYRQuery *messagesQuery = [LYRQuery queryWithClass:[LYRMessage class]];
     messagesQuery.predicate = [LYRPredicate predicateWithProperty:@"conversation" operator:LYRPredicateOperatorIsEqualTo value:lyrConversation];
@@ -127,8 +63,8 @@ NSString * const kMessageChangeNotification = @"MessageChange";
         [lyrConversation setValue:studentName forMetadataAtKeyPath:@"student.name"];
     }
     
-    CRUser *participant = [[CRUser alloc] initWithID:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"ID"] avatarString:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"avatarString"] name:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"name"] schoolID:[CRAuthenticationManager schoolID] schoolName:[CRAuthenticationManager schoolName]];
-    NSLog(@"participaant name: %@", participant.name);
+    CRUser *participant = [[CRUser alloc] initWithID:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"ID"] avatarString:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"avatarString"] name:[[lyrConversation.metadata valueForKey:@"student"] valueForKey:@"name"] schoolID:[lyrConversation.metadata valueForKey:@"schoolID"] schoolName:[[CRAuthenticationManager sharedInstance] schoolNameForID:[lyrConversation.metadata valueForKey:@"schoolID"]]];
+    NSLog(@"participant name: %@", participant.name);
     
     CRConversation *crConversation = [[CRConversation alloc] initWithParticipant:participant conversation:lyrConversation messages:messages latestMessage:latestMessage unread:unread];
     

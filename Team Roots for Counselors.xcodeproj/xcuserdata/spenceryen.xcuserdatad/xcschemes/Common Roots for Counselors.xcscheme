@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C7340D21A74DF1100C078B1"
                BuildableName = "Team Roots Counselors.app"
-               BlueprintName = "Team Roots Counselors"
-               ReferencedContainer = "container:Team Roots Counselors.xcodeproj">
+               BlueprintName = "Team Roots for Counselors"
+               ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C7340EB1A74DF1200C078B1"
-               BuildableName = "Team Roots Counselors.xctest"
-               BlueprintName = "Team Roots CounselorsTests"
-               ReferencedContainer = "container:Team Roots Counselors.xcodeproj">
+               BuildableName = "Team Roots for Counselors.xctest"
+               BlueprintName = "Team Roots for CounselorsTests"
+               ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C7340EB1A74DF1200C078B1"
-               BuildableName = "Team Roots Counselors.xctest"
-               BlueprintName = "Team Roots CounselorsTests"
-               ReferencedContainer = "container:Team Roots Counselors.xcodeproj">
+               BuildableName = "Team Roots for Counselors.xctest"
+               BlueprintName = "Team Roots for CounselorsTests"
+               ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,8 +58,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C7340D21A74DF1100C078B1"
             BuildableName = "Team Roots Counselors.app"
-            BlueprintName = "Team Roots Counselors"
-            ReferencedContainer = "container:Team Roots Counselors.xcodeproj">
+            BlueprintName = "Team Roots for Counselors"
+            ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C7340D21A74DF1100C078B1"
-            BuildableName = "Team Roots Counselors.app"
-            BlueprintName = "Team Roots Counselors"
-            ReferencedContainer = "container:Team Roots Counselors.xcodeproj">
+            BuildableName = "Team Roots for Counselors.app"
+            BlueprintName = "Team Roots for Counselors"
+            ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -100,8 +100,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C7340D21A74DF1100C078B1"
             BuildableName = "Team Roots Counselors.app"
-            BlueprintName = "Team Roots Counselors"
-            ReferencedContainer = "container:Team Roots Counselors.xcodeproj">
+            BlueprintName = "Team Roots for Counselors"
+            ReferencedContainer = "container:Team Roots for Counselors.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

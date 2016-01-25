@@ -65,15 +65,15 @@
         if(self.queryController.count == 0) {
             messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 200, self.view.bounds.size.width - 90, 200)];
             messageLabel.center = CGPointMake(self.view.center.x, self.view.center.y - 30);
-            messageLabel.text = @"No conversations yet :(";
+            messageLabel.text = @"No conversations yet.";
             messageLabel.textColor = [UIColor lightGrayColor];
             messageLabel.numberOfLines = 4;
             messageLabel.textAlignment = NSTextAlignmentCenter;
-            messageLabel.font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:25];
+            messageLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:25];
             messageLabel.alpha = 0.6;
             [self.view addSubview:messageLabel];
             
-            self.conversationsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+            self.conversationsTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
             [self.conversationsTableView reloadData];
         } else {
             messageLabel.alpha = 0;

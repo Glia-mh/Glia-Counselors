@@ -202,6 +202,7 @@
 
 - (NSString *)schoolNameForID:(NSString *)schoolID {
     PFQuery *query = [PFQuery queryWithClassName:@"SchoolIDs"];
+    query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     PFObject *school = [query getObjectWithId:schoolID];
     return [school objectForKey:@"SchoolName"];
 }
